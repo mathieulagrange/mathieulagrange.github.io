@@ -1,0 +1,44 @@
+
+
+Inspirations
+
+Areas of investigation
+
+Reproducible research
+
+Lorena Manifesto 
+
+I will teach my graduate students about reproducibility.
+All our research code (and writing) is under version control.
+We will always carry out verification and validation (V&V reports are posted to figshare)
+For main results in a paper, we will share data, plotting script & figure under CC-BY
+We will upload the preprint to arXiv at the time of submission of a paper.
+We will release code at the time of submission of a paper.
+We will add a "Reproducibility" declaration at the end of each paper.
+I will keep an up-to-date web presence.
+
+https://ndownloader.figshare.com/files/232563
+
+Science Code Manifesto
+
+The 5 C's
+
+Code
+All source code written specifically to process data for a published paper must be available to the reviewers and readers of the paper.
+Copyright
+The copyright ownership and license of any released source code must be clearly stated.
+Citation
+Researchers who use or adapt science source code in their research must credit the code’s creators in resulting publications.
+Credit
+Software contributions must be included in systems of scientific assessment, credit, and recognition.
+Curation
+Source code must remain available, linked to related materials, for the useful lifetime of the publication.
+
+Explanes
+
+Contributions
+
+Publications
+
+iframe hal
+

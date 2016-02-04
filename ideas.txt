@@ -1,0 +1,113 @@
+Carousel
+
+Poetry
+
+Richard Brautigan
+
+All Watched Over By Machines Of Loving Grace (1967)
+
+I like to think (and
+the sooner the better!)
+of a cybernetic meadow
+where mammals and compute
+live together in mutually
+programming harmony
+like pure water
+touching clear sky. 
+
+I like to think
+(right now, please!)
+of a cybernetic forest
+filled with pines and electronics
+where deer stroll peacefully
+past computers
+as if they were flowers
+with spinning blossoms. 
+
+I like to think
+(it has to be!)
+of a cybernetic ecology
+where we are free of our labors
+and joined back to nature,
+returned to our mammal
+brothers and sisters,
+and all watched over
+by machines of loving grace.
+
+
+Philosophy
+
+Cornelius castoriadis (interview by Chris Marker, June 12th-28th 1989)
+
+https://youtu.be/5HL22xsVK4c?t=2383
+
+<iframe width="420" height="315"
+src="http://www.youtube.com/embed/XGSy3_Czz8k?autoplay=1">
+</iframe>
+
+Literature
+
+The matrix has its roots in primitive arcade games. … Cyberspace. A consensual hallucination experienced daily by billions of legitimate operators, in every nation, by children being taught mathematical concepts. … A graphic representation of data abstracted from banks of every computer in the human system. Unthinkable complexity. Lines of light ranged in the nonspace of the mind, clusters and constellations of data. Like city lights, receding.
+
+— Gibson, p. 69
+
+Neuromancer
+
+Wisdom
+
+Parable of the blind men and elephant
+
+A group of blind men heard that a strange animal, called an elephant, had been brought to the town, but none of them were aware of its shape and form. Out of curiosity, they said: "We must inspect and know it by touch, of which we are capable". So, they sought it out, and when they found it they groped about it. In the case of the first person, whose hand landed on the trunk, said "This being is like a drain pipe". For another one whose hand reached its ear, it seemed like a kind of fan. As for another person, whose hand was upon its leg, said, "I perceive the shape of the elephant to be like a pillar". And in the case of the one who placed his hand upon its back said, "Indeed, this elephant is like a throne". Now, each of these presented a true aspect when he related what he had gained from experiencing the elephant. None of them had strayed from the true description of the elephant. Yet they fell short of fathoming the true appearance of the elephant.
+
+Science
+
+Francis Bacon (1561–1626).  The New Organon
+
+MAN, being the servant and interpreter of Nature, can do and understand so much and so much only as he has observed in fact or in thought of the course of nature: beyond this he neither knows anything nor can do anything.
+
+Human knowledge and human power meet in one; for where the cause is not known the effect cannot be produced. Nature to be commanded must be obeyed; and that which in contemplation is as the cause is in operation as the rule.
+
+Mathematics
+
+John Von Neumann
+
+If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is.
+
+Young man, in mathematics you don't understand things. You just get used to them. 
+
+Computer Science
+
+"Amazing Grace" Grace Hoper
+
+ We must state relationships, not procedures.
+
+The most dangerous phrase in the language is, "We've always done it this way."
+
+You manage things, you lead people. We went overboard on management and forgot about leadership.
+
+
+Religion
+
+turing
+
+Science is a differential equation. Religion is a boundary condition.
+
+
+Research
+
+Gaston Bachelard
+
+The one that finds without searching is the one that long time searched without finding.
+
+A used soul is a dead soul.
+
+Admiting that we were mistaken is to make the most striking homage to the perspicacity of our mind.
+
+
+
+
+
+
+
+
+
