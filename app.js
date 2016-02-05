@@ -1,5 +1,5 @@
 
-var app = angular.module('explanes', []);
+var app = angular.module('researchWebSite', []);
 
 app.config(['$compileProvider',
 		 function($compileProvider) {   
