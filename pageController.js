@@ -5,7 +5,7 @@ app.controller("PageController", function($scope, $timeout, $interval) {
 	{"name":"Reproducible Research", "page":"pages/reproducible.html", "anchor":"reproducible"},
 	{"name":"ExpLanes (EXPerimental PLANning for Engineering and Science)", "page":"pages/explanes.html", "anchor":"explanes"},
 	{"name":"Contributions", "page":"pages/contributions.html", "anchor":"contributions"},
-	{"name":"Publications", "page":"web/pages/publications.html", "anchor":"publications"},
+	{"name":"Publications", "page":"pages/publications.html", "anchor":"publications"},
    ];
 
     var scrollSpeedMult = 0;
