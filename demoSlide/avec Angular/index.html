@@ -1,0 +1,42 @@
+<html ng-app="demoMathieu">
+
+  <head>
+    <title>Demo pour Mathieu -- avec Angular</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="demo.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+
+  <body>
+
+    <div id="page" ng-controller="Demo">
+
+      <!-- tous les attributs en "ng-" sont des attributs spécifiques à angular, qui font le binding dynamique data-view -->
+      <p><a href="#" ng-click="selectSlide(0)">Slide 1</a> - <a href="#" ng-click="selectSlide(1)">Slide 2</a></p>
+
+      <!-- Une div positionnée en "absolute" sera positionnée relativement à la première div parente -->
+      <!-- qui est elle-même soit "absolute", soit "fixed", soit "relative" -->
+      <div style="position:relative">
+
+	<!-- ici la div a une class statique, "slide" et une classe dynamique: "visible", active uniquement quand selectedSlide==0 -->
+	<div class="slide" ng-class="{visible:(selectedSlide==0)}">
+	  <!-- opacité réglée par un attribut de style dynamique -->
+	  <p ng-style="{opacity:opacity[0][0]}"> Première ligne de texte</p>
+	  <p ng-style="{opacity:opacity[0][1]}"> Une grenouille : <img src="images/frog.gif"></img></p>
+	  <p ng-style="{opacity:opacity[0][2]}"> Deuxième ligne de texte</p>
+	</div>
+
+	<div class="slide" ng-class="{visible:(selectedSlide==1)}">
+	  <p ng-style="{opacity:opacity[1][0]}"> Truc</p>
+	  <p ng-style="{opacity:opacity[1][1]}"> Machin</p>
+	  <iframe width="420" height="315" src="https://www.youtube.com/embed/fUspLVStPbk" ng-style="{opacity:opacity[1][2]}"></iframe>
+	</div>
+
+      </div>
+      
+    </div>
+    
+  </body>
+  
+</html>

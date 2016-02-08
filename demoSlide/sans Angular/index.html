@@ -1,0 +1,38 @@
+<html ng-app="demoMathieu">
+
+  <head>
+    <title>Demo pour Mathieu -- sans angular</title>
+    <script src="demo.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+
+  <body>
+
+    <div id="page">
+
+      <p><a href="#" onclick="selectSlide(0)">Slide 1</a> - <a href="#" onclick="selectSlide(1)">Slide 2</a></p>
+
+      <!-- Une div positionnée en "absolute" sera positionnée relativement à la première div parente -->
+      <!-- qui est elle-même soit "absolute", soit "fixed", soit "relative" -->
+      <div style="position:relative">
+
+	<!-- tous les éléments doivent avoir des id pour être manipulables -->
+	<div id="slide-0" class="slide" style="opacity:0">
+	  <p id="slide-0-part-0" style="opacity:0"> Première ligne de texte</p>
+	  <p id="slide-0-part-1" style="opacity:0"> Une grenouille : <img src="images/frog.gif"></img></p>
+	  <p id="slide-0-part-2" style="opacity:0"> Deuxième ligne de texte</p>
+	</div>
+
+	<div id="slide-1" class="slide" style="opacity:0">
+	  <p id="slide-1-part-0" style="opacity:0"> Truc</p>
+	  <p id="slide-1-part-1" style="opacity:0"> Machin</p>
+	  <iframe  id="slide-1-part-2" width="420" height="315" src="https://www.youtube.com/embed/fUspLVStPbk" style="opacity:0"></iframe>
+	</div>
+
+      </div>
+      
+    </div>
+    
+  </body>
+  
+</html>

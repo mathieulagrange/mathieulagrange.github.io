@@ -1,0 +1,35 @@
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+div#page {
+    width: 1000px;
+    margin: auto;
+}
+
+div.slide {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 1px solid gray;
+    width: 600px;
+    height: 450px;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+div.slide.visible {
+    opacity: 1;
+}
+
+div.slide p {
+    transition: opacity 1s;
+}
+
+div.slide iframe {
+    transition: opacity 1s;
+}
