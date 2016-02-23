@@ -30,6 +30,11 @@ div.slide p {
     transition: opacity 1s;
 }
 
-div.slide iframe {
-    transition: opacity 1s;
+div.author {
+    transition: opacity 10s;
+    float: right;
+}
+
+.marge {
+margin-left: 5em;
 }

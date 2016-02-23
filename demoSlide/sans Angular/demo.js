@@ -3,8 +3,15 @@ var selectedSlide = 0;
 // Timings d'apparition des div pour chaque slide, en millisecondes
 var timings = [
     [1000, 3000, 5000],
-    [1000, 4000, 7000]
+    [1000, 4000, 6000, 8000, 10000, 12000, 14000, 16000],
+    [1000, 3000, 5000, 7000],
+    [1000, 3000, 5000, 7000, 9000, 11000],
+   [1000, 3000, 5000, 8000],
+       [1000, 3000, 5000, 7000, 9000, 11000, 13000, 15000],
+      [1000, 5000, 9000, 13000, 17000, 21000, 25000, 31000],
+      [1000, 3000],
 ];
+
 
 function selectSlide (n) {
     var old = selectedSlide;
@@ -23,6 +30,17 @@ function selectSlide (n) {
 	    document.getElementById("slide-"+n+"-part-"+index).style.opacity = 1;
 	}, time);
     });
+
+  document.getElementById("author"+n).style.opacity = 0;
+  timings[n].forEach(function(time, index) {
+	setTimeout(function(){		
+		if (index==timings[n].length-1)
+	     document.getElementById("author"+n).style.opacity = 0.7;
+	}, time);
+  });
+
+
+    
     // Set slide n as the currently displayed one
     document.getElementById("slide-"+old).style.opacity = 0;
     document.getElementById("slide-"+n).style.opacity = 1;
