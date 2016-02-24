@@ -30,8 +30,13 @@ div.slide p {
     transition: opacity 1s;
 }
 
+div.slide div {
+    transition: opacity 1s;
+}
+
 div.author {
-    transition: opacity 10s;
+	    opacity: 0;
+    transition: opacity 5s;
     float: right;
 }
 
