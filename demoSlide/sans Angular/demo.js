@@ -36,7 +36,6 @@ function selectSlide (n) {
 	setTimeout(function(){		
 	     document.getElementById("author"+n).style.opacity = 0.8;
 	},timings[n][timings[n].length-1]+1000);
-  });
 
 
     
