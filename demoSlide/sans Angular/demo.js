@@ -33,11 +33,9 @@ function selectSlide (n) {
     });
 
   //document.getElementById("author"+old).style.opacity = 0;
-  timings[n].forEach(function(time, index) {
 	setTimeout(function(){		
-		if (index==timings[n].length-1)
 	     document.getElementById("author"+n).style.opacity = 0.8;
-	}, time);
+	},timings[n][timings[n].length-1]+1000);
   });
 
 
