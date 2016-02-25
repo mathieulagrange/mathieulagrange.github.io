@@ -32,7 +32,7 @@ function selectSlide (n) {
 	}, time);
     });
 
-  //document.getElementById("author"+old).style.opacity = 0;
+  document.getElementById("author"+old).style.opacity = 0;
 	setTimeout(function(){		
 	     document.getElementById("author"+n).style.opacity = 0.8;
 	},timings[n][timings[n].length-1]+1000);
