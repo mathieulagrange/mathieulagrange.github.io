@@ -2,7 +2,7 @@ var selectedSlide = 0;
 
 // Timings d'apparition des div pour chaque slide, en millisecondes
 var timings = [
-    [1000, 3000, 5000, 9000, 11000, 13000, 17000, 19000, 21000, 25000, 27000],
+    [1000, 3000, 6000], 
     [1000, 4000, 6000, 8000, 10000, 12000, 14000, 16000],
     [1000, 3000, 5000, 7000],
     [1000, 3000, 5000, 7000, 9000, 11000],
@@ -11,8 +11,10 @@ var timings = [
       [1000, 6000, 10000, 15000, 19000, 23000, 27000, 33000],
       [1000, 3000],
       [1000],
+        [1000, 3000, 6000], 
+    [1000, 3000, 6000, 10000, 13000],
+  
 ];
-
 
 function selectSlide (n) {
     var old = selectedSlide;
@@ -34,14 +36,20 @@ function selectSlide (n) {
 
   document.getElementById("author"+old).style.opacity = 0;
 	setTimeout(function(){		
-	     document.getElementById("author"+n).style.opacity = 0.8;
-	},timings[n][timings[n].length-1]+1000);
+	     document.getElementById("author"+n).style.opacity = 0.7;
+	},timings[n][timings[n].length-1]+2000);
 
 
     
     // Set slide n as the currently displayed one
     document.getElementById("slide-"+old).style.opacity = 0;
     document.getElementById("slide-"+n).style.opacity = 1;
+    
+    if (n == 0) {setTimeout(function(){selectSlide(9)}, timings[n][timings[n].length-1]+4000);}
+    if (n == 9){setTimeout(function(){selectSlide(10)}, timings[n][timings[n].length-1]+5000);}
+    
+
+
 }
 
 // Start with slide 1 when document is loaded :
