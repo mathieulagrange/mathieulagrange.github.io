@@ -40,6 +40,12 @@ div.author {
     float: right;
 }
 
+div.date {
+	    opacity: 0;
+    transition: opacity 16s;
+    float: right;
+}
+
 .marge {
 margin-left: 5em;
 }

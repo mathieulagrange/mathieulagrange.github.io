@@ -16,9 +16,15 @@ var timings = [
   
 ];
 
+
+
 function selectSlide (n) {
-    var old = selectedSlide;
+    console.log(n+" "+selectedSlide);
+    if (n > 8 && selectedSlide != 0 && selectedSlide != 9) return;
+ 
+ 	 var old = selectedSlide;
     selectedSlide = n;
+      
     // Initialize all opacities to 0
     timings[old].forEach(function(t, index){
 	// Au lieu de manipuler des données, on accède manuellement aux éléments du DOM
@@ -38,6 +44,9 @@ function selectSlide (n) {
 	setTimeout(function(){		
 	     document.getElementById("author"+n).style.opacity = 0.7;
 	},timings[n][timings[n].length-1]+2000);
+	setTimeout(function(){		
+	     document.getElementById("date"+n).style.opacity = 1;
+	},timings[n][timings[n].length-1]+4000);
 
 
     
@@ -47,9 +56,6 @@ function selectSlide (n) {
     
     if (n == 0) {setTimeout(function(){selectSlide(9)}, timings[n][timings[n].length-1]+4000);}
     if (n == 9){setTimeout(function(){selectSlide(10)}, timings[n][timings[n].length-1]+5000);}
-    
-
-
 }
 
 // Start with slide 1 when document is loaded :
