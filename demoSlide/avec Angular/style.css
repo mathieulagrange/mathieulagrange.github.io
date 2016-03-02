@@ -26,10 +26,18 @@ div.slide.visible {
     opacity: 1;
 }
 
-div.slide p {
+div.slide div {
     transition: opacity 1s;
 }
 
-div.slide iframe {
-    transition: opacity 1s;
+div.author {
+	    opacity: 0;
+    transition: opacity 8s;
+    float: right;
+}
+
+div.date {
+	    opacity: 0;
+    transition: opacity 16s;
+    float: right;
 }

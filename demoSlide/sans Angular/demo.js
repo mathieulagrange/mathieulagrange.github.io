@@ -6,23 +6,20 @@ var timings = [
     [1000, 4000, 6000, 8000, 10000, 12000, 14000, 16000],
     [1000, 3000, 5000, 7000],
     [1000, 3000, 5000, 7000, 9000, 11000],
-   [1000, 3000, 5000, 8000],
-       [1000, 3000, 5000, 7000, 9000, 11000, 13000, 15000],
-      [1000, 6000, 10000, 15000, 19000, 23000, 27000, 33000],
-      [1000, 3000],
-      [1000],
-        [1000, 3000, 6000], 
-    [1000, 3000, 6000, 10000, 13000],
-  
+    [1000, 3000, 5000, 8000],
+    [1000, 3000, 5000, 7000, 9000, 11000, 13000, 15000],
+    [1000, 6000, 10000, 15000, 19000, 23000, 27000, 33000],
+    [1000, 3000],
+    [1000],
+    [1000, 3000, 6000], 
+    [1000, 3000, 6000, 10000, 13000], 
 ];
-
-
 
 function selectSlide (n) {
     console.log(n+" "+selectedSlide);
     if (n > 8 && selectedSlide != 0 && selectedSlide != 9) return;
- 
- 	 var old = selectedSlide;
+
+	var old = selectedSlide;
     selectedSlide = n;
       
     // Initialize all opacities to 0
@@ -42,10 +39,10 @@ function selectSlide (n) {
 
   document.getElementById("author"+old).style.opacity = 0;
 	setTimeout(function(){		
-	     document.getElementById("author"+n).style.opacity = 0.7;
+	    document.getElementById("author"+n).style.opacity = 0.7;
 	},timings[n][timings[n].length-1]+2000);
 	setTimeout(function(){		
-	     document.getElementById("date"+n).style.opacity = 1;
+	    document.getElementById("date"+n).style.opacity = 1;
 	},timings[n][timings[n].length-1]+4000);
 
 

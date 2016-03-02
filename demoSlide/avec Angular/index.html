@@ -13,19 +13,68 @@
     <div id="page" ng-controller="Demo">
 
       <!-- tous les attributs en "ng-" sont des attributs spécifiques à angular, qui font le binding dynamique data-view -->
-      <p><a href="#" ng-click="selectSlide(0)">Slide 1</a> - <a href="#" ng-click="selectSlide(1)">Slide 2</a></p>
-
+       <p><a href="#" ng-click="selectSlide(0)">Poetry</a> - 
+      	<a href="#" ng-click="selectSlide(1)">Literature</a> - 
+        <a href="#" ng-click="selectSlide(8)">Philosophy</a> -
+      	<a href="#" ng-click="selectSlide(5)">Science</a> - 
+       	<a href="#" ng-click="selectSlide(6)">Wisdom</a> - 
+      	<a href="#" ng-click="selectSlide(3)">Religion</a> - 
+      	<a href="#" ng-click="selectSlide(2)">Research</a> - 
+      	<a href="#" ng-click="selectSlide(4)">Mathematics</a> - 
+    	<a href="#" ng-click="selectSlide(7)">Computer Science</a>
+      </p>
+      
       <!-- Une div positionnée en "absolute" sera positionnée relativement à la première div parente -->
       <!-- qui est elle-même soit "absolute", soit "fixed", soit "relative" -->
       <div style="position:relative">
 
-	<!-- ici la div a une class statique, "slide" et une classe dynamique: "visible", active uniquement quand selectedSlide==0 -->
-	<div class="slide" ng-class="{visible:(selectedSlide==0)}">
-	  <!-- opacité réglée par un attribut de style dynamique -->
-	  <p ng-style="{opacity:opacity[0][0]}"> Première ligne de texte</p>
-	  <p ng-style="{opacity:opacity[0][1]}"> Une grenouille : <img src="images/frog.gif"></img></p>
-	  <p ng-style="{opacity:opacity[0][2]}"> Deuxième ligne de texte</p>
+	<!-- ici la div a une class statique, "slide" et une classe dynamique: "visible", active uniquement quand selectedSlide==0 -->	
+	<div id="slide-0" class="slide" ng-class="{visible:(selectedSlide==0)}">
+	<p>
+	  <div ng-style="{opacity:opacity[0][0]}" style="text-align:center"> I like to think   </div>
+	  <div ng-style="{opacity:opacity[0][1]}"  style="text-align:center"> (and the sooner the better!) </div>
+	  <div ng-style="{opacity:opacity[0][2]}"  style="text-align:center"> 
+		of a cybernetic meadow <br>
+		where mammals and computers <br>
+		live together in mutually <br>
+		like pure water  <br> 
+		touching clear sky. </div>
+	  </p>
+	  </div> </div>
 	</div>
+	<div id="slide-9" class="slide" ng-class="{visible:(selectedSlide==9)}">
+	  <p>
+	  <div ng-style="{opacity:opacity[9][0]}" style="text-align:center"> 
+		I like to think   </div>
+	  <div ng-style="{opacity:opacity[9][1]}" style="text-align:center"> 
+		(right now, please!)   </div>
+	  <div ng-style="{opacity:opacity[9][2]}" style="text-align:center"> 
+		of a cybernetic forest <br>
+		filled with pines and electronics <br>
+		where deer stroll peacefully <br>
+		past computers <br>
+		as if they were flowers <br>
+		with spinning blossoms. </div>	  
+	  </p>
+	</div>
+	<div id="slide-10" class="slide" ng-class="{visible:(selectedSlide==10)}">
+	  <p>
+	  <div ng-style="{opacity:opacity[10][0]}" style="opacity:0;text-align:center">  I like to think   </div>
+		  <div id="slide-10-part-1" style="opacity:0;text-align:center"> (it has to be!)  </div>
+ 	  <div ng-style="{opacity:opacity[10][1]}" style="opacity:0;text-align:center"> 
+		of a cybernetic ecology <br>
+		where we are free of our labors <br>
+		and joined back to nature, <br>
+		returned to our mammal <br>
+		brothers and sisters, <br> 	</div>
+		<div ng-style="{opacity:opacity[10][2]}" style="opacity:0;text-align:center"> 
+		and </div> <div ng-style="{opacity:opacity[10][3]}" style="opacity:0;text-align:center"> 
+		 all watched over <br>
+		by machines of loving grace.
+		</div>
+	
+		</p>
+           <div ng-style="{opacity:opacity[10][4]}" class="author" > Richard Brautigan <div ng-style="{opacity:opacity[10][5]}" class="date" > &nbsp (1967) </div></div>
 
 	<div class="slide" ng-class="{visible:(selectedSlide==1)}">
 	  <p ng-style="{opacity:opacity[1][0]}"> Truc</p>
