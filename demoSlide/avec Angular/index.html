@@ -13,7 +13,7 @@
     <div id="page" ng-controller="Demo">
 
       <!-- tous les attributs en "ng-" sont des attributs spécifiques à angular, qui font le binding dynamique data-view -->
-       <p><a href="#" ng-click="selectSlide(0)">Poetry</a> - 
+      <p><a href="#" ng-click="selectSlide(0)">Poetry</a> - 
       	<a href="#" ng-click="selectSlide(1)">Literature</a> - 
         <a href="#" ng-click="selectSlide(8)">Philosophy</a> -
       	<a href="#" ng-click="selectSlide(5)">Science</a> - 
@@ -30,62 +30,185 @@
 
 	<!-- ici la div a une class statique, "slide" et une classe dynamique: "visible", active uniquement quand selectedSlide==0 -->	
 	<div id="slide-0" class="slide" ng-class="{visible:(selectedSlide==0)}">
-	<p>
-	  <div ng-style="{opacity:opacity[0][0]}" style="text-align:center"> I like to think   </div>
-	  <div ng-style="{opacity:opacity[0][1]}"  style="text-align:center"> (and the sooner the better!) </div>
-	  <div ng-style="{opacity:opacity[0][2]}"  style="text-align:center"> 
-		of a cybernetic meadow <br>
-		where mammals and computers <br>
-		live together in mutually <br>
-		like pure water  <br> 
-		touching clear sky. </div>
+	  <p>
+	    <div ng-style="{opacity:opacity[0][0]}" class="centeredVerse"> I like to think 
+	    </div>
+	    <div ng-style="{opacity:opacity[0][1]}"  class="centeredVerse"> (and the sooner the better!) 
+	    </div>
+	    <div ng-style="{opacity:opacity[0][2]}"  class="centeredVerse"> 
+	      of a cybernetic meadow <br>
+	      where mammals and computers <br>
+	      live together in mutually <br>
+	      like pure water  <br> 
+	      touching clear sky. 
+	    </div>
 	  </p>
-	  </div> </div>
 	</div>
 	<div id="slide-9" class="slide" ng-class="{visible:(selectedSlide==9)}">
 	  <p>
-	  <div ng-style="{opacity:opacity[9][0]}" style="text-align:center"> 
-		I like to think   </div>
-	  <div ng-style="{opacity:opacity[9][1]}" style="text-align:center"> 
-		(right now, please!)   </div>
-	  <div ng-style="{opacity:opacity[9][2]}" style="text-align:center"> 
-		of a cybernetic forest <br>
-		filled with pines and electronics <br>
-		where deer stroll peacefully <br>
-		past computers <br>
-		as if they were flowers <br>
-		with spinning blossoms. </div>	  
+	    <div ng-style="{opacity:opacity[9][0]}" class="centeredVerse"> 
+	      I like to think   
+	    </div>
+	    <div ng-style="{opacity:opacity[9][1]}" class="centeredVerse"> 
+	      (right now, please!)   
+	    </div>
+	    <div ng-style="{opacity:opacity[9][2]}" class="centeredVerse"> 
+	      of a cybernetic forest <br>
+	      filled with pines and electronics <br>
+	      where deer stroll peacefully <br>
+	      past computers <br>
+	      as if they were flowers <br>
+	      with spinning blossoms. 
+	    </div>	  
 	  </p>
 	</div>
 	<div id="slide-10" class="slide" ng-class="{visible:(selectedSlide==10)}">
 	  <p>
-	  <div ng-style="{opacity:opacity[10][0]}" style="opacity:0;text-align:center">  I like to think   </div>
-		  <div id="slide-10-part-1" style="opacity:0;text-align:center"> (it has to be!)  </div>
- 	  <div ng-style="{opacity:opacity[10][1]}" style="opacity:0;text-align:center"> 
-		of a cybernetic ecology <br>
-		where we are free of our labors <br>
-		and joined back to nature, <br>
-		returned to our mammal <br>
-		brothers and sisters, <br> 	</div>
-		<div ng-style="{opacity:opacity[10][2]}" style="opacity:0;text-align:center"> 
-		and </div> <div ng-style="{opacity:opacity[10][3]}" style="opacity:0;text-align:center"> 
-		 all watched over <br>
-		by machines of loving grace.
-		</div>
+	    <div ng-style="{opacity:opacity[10][0]}" class="centeredVerse">  I like to think   
+	    </div>
+	    <div ng-style="{opacity:opacity[10][1]}" class="centeredVerse"> (it has to be!)  
+	    </div>
+ 	    <div ng-style="{opacity:opacity[10][2]}" class="centeredVerse"> 
+	      of a cybernetic ecology <br>
+	      where we are free of our labors <br>
+	      and joined back to nature, <br>
+	      returned to our mammal <br>
+	      brothers and sisters, <br> 	
+	    </div>
+	    <div ng-style="{opacity:opacity[10][3]}" class="centeredVerse"> 
+	      and 
+	    </div> 
+	    <div ng-style="{opacity:opacity[10][4]}" class="centeredVerse"> 
+	      all watched over <br>
+	      by machines of loving grace.
+	    </div>	    
+	  </p>
+	  <div ng-style="{opacity:opacity[10][5]}" class="author" > Richard Brautigan 
+	    <div ng-style="{opacity:opacity[10][6]}" class="date" > &nbsp (1967) 
+	    </div>
+	  </div>
+	</div>
+	<div id="slide-1" class="slide" ng-class="{visible:(selectedSlide==1)}">
+	  <p ng-style="{opacity:opacity[1][0]}"> 
+	    The matrix has its roots in primitive arcade games.
+	  </p>
+	  <p ng-style="{opacity:opacity[1][1]}"> 
+	    Cyberspace.
+	  </p>
+	  <p ng-style="{opacity:opacity[1][2]}"> 
+	    A consensual hallucination experienced daily by billions of legitimate operators, in every nation, by children being taught mathematical concepts.
+	  </p>
+	  <p ng-style="{opacity:opacity[1][3]}"> 
+	    A graphic representation of data abstracted from banks of every computer in the human system. 
+	  </p>
+	  <p ng-style="{opacity:opacity[1][4]}"> 
+	    Unthinkable complexity.
+	  </p> 
+	  <p ng-style="{opacity:opacity[1][5]}"> 
+	    Lines of light ranged in the nonspace of the mind, clusters and constellations of data.
+	  </p>
+	  <p ng-style="{opacity:opacity[1][6]}"> 
+	    Like city lights, 
+	  </p>
+	  <p ng-style="{opacity:opacity[1][7]}"> 
+	    Receding.
+	  </p>
+	  <div ng-style="{opacity:opacity[1][8]}" class="author" > 
+	    Wiliam Gibson 
+	    <div ng-style="{opacity:opacity[1][9]}" class="date" > 
+	      &nbsp (1984) 
+	    </div> 
+	  </div>
+	</div>
 	
-		</p>
-           <div ng-style="{opacity:opacity[10][4]}" class="author" > Richard Brautigan <div ng-style="{opacity:opacity[10][5]}" class="date" > &nbsp (1967) </div></div>
-
-	<div class="slide" ng-class="{visible:(selectedSlide==1)}">
-	  <p ng-style="{opacity:opacity[1][0]}"> Truc</p>
-	  <p ng-style="{opacity:opacity[1][1]}"> Machin</p>
-	  <iframe width="420" height="315" src="https://www.youtube.com/embed/5HL22xsVK4c?t=2383" ng-style="{opacity:opacity[1][2]}"></iframe>
+	<div id="slide-2" class="slide" style="opacity:0">
+	  <p id="slide-2-part-0" style="opacity:0"> The one that finds </p>
+	  <p id="slide-2-part-1"  style="opacity:0;margin-left: 5em">  without searching, </p>
+	  <p id="slide-2-part-2" style="opacity:0">  is the one that long time searched </p>
+	  <p id="slide-2-part-3" style="opacity:0;margin-left: 9em"> without finding. </p>
+	  <div id="author2" class="author" style="opacity:0"> Gaston Bachelard <div id="date2" class="date" > &nbsp (~1960) </div> </div>
+	</div>
+	<div id="slide-3" class="slide" style="opacity:0">
+	  <p id="slide-3-part-0" style="opacity:0;text-align:center"> Science  </p>
+	  <p id="slide-3-part-1" style="opacity:0;text-align:center">  is  </p>
+	  <p id="slide-3-part-2" style="opacity:0;text-align:center"> a differential equation. </p>
+	  <p id="slide-3-part-3" style="opacity:0;text-align:center"> Religion  </p>
+	  <p id="slide-3-part-4" style="opacity:0;text-align:center">  is  </p>
+	  <p id="slide-3-part-5" style="opacity:0;text-align:center">  a boundary condition. </p>
+	  <div id="author3" class="author" > Alan Turing <div id="date3" class="date" > &nbsp (1954) </div> </div>
+	</div>
+	<div id="slide-4" class="slide" style="opacity:0">
+	  <p id="slide-4-part-0" style="opacity:0;text-align:center"> Young man,  </p>
+	  <p id="slide-4-part-1" style="opacity:0;text-align:center">   in mathematics   </p>
+	  <p id="slide-4-part-2" style="opacity:0;text-align:center"> you don't understand things. </p>
+	  <p id="slide-4-part-3" style="opacity:0;text-align:center"> You just get used to them.   </p>
+	  <div id="author4" class="author" > John Von Neumann <div id="date4" class="date" > &nbsp (1979) </div> </div>
+	</div>
+	
+	<div id="slide-5" class="slide" style="opacity:0">
+	  <p id="slide-5-part-0" style="opacity:0;text-align:center"> MAN,</p>
+	  <p id="slide-5-part-1" style="opacity:0;text-align:center"> being the servant and interpreter of Nature,</p>
+	  <p id="slide-5-part-2" style="opacity:0;text-align:center"> can do and understand so much</p>
+	  <p id="slide-5-part-3" style="opacity:0;text-align:center"> and so much only</p>
+	  <p id="slide-5-part-4" style="opacity:0;text-align:center"> as he has observed in fact or in thought </p>
+	  <p id="slide-5-part-5" style="opacity:0;text-align:center">  of the course of nature: </p>
+	  <p id="slide-5-part-6" style="opacity:0;;text-align:center"> beyond this he neither knows anything</p> 
+	  <p id="slide-5-part-7" style="opacity:0;;text-align:center"> nor can do anything.</p> 
+	  <div id="author5" class="author" > Francis Bacon <div id="date5" class="date" > &nbsp (~1600) </div> </div>
 	</div>
 
-      </div>
-      
-    </div>
-    
-  </body>
-  
+	<div id="slide-6" class="slide" style="opacity:0">
+	  <p id="slide-6-part-0" style="opacity:0"> 
+	    
+	    A group of blind men heard that a strange animal, <br>
+	    called an elephant, <br>
+	    but none of them were aware of its shape and form. <br>
+	  </p>
+	  <p id="slide-6-part-1" style="opacity:0"> 
+	    Out of curiosity, they said: <br>
+	    "We must inspect and know it by touch, of which we are capable". <br>
+	    So, they sought it out, and when they found it they groped about it. <br>
+	  </p>
+	  <p id="slide-6-part-2" style="opacity:0"> 
+	    In the case of the first person, <br>
+	    whose hand landed on the trunk, <br>
+	    said "This being is like a drain pipe". <br>
+	  </p>
+	  <p id="slide-6-part-3" style="opacity:0"> 
+	    For another one whose hand reached its ear, <br>
+	    it seemed like a kind of fan. <br>
+	  </p>
+	  <p id="slide-6-part-4" style="opacity:0"> 
+	    As for another person, whose hand was upon its leg, <br>
+	    said, "I perceive the shape of the elephant to be like a pillar". <br>
+	  </p>
+	  <p id="slide-6-part-5" style="opacity:0"> 
+	    And in the case of the one who placed his hand upon its back said, <br>
+	    "Indeed, this elephant is like a throne". <br>
+	  </p>
+	  <p id="slide-6-part-6" style="opacity:0"> 
+	    Now, each of these presented a true aspect <br>
+	    when he related what he had gained from experiencing the elephant. <br>
+	    None of them had strayed from the true description of the elephant. <br>
+	  </p>
+	  <p id="slide-6-part-7" style="opacity:0"> 
+	    Yet they fell short of fathoming the true appearance of the elephant.<br>
+	  </p>
+	  <div id="author6" class="author" > <div id="date6" class="date" >  </div> </div>
+	</div>
+	
+	<div id="slide-7" class="slide" style="opacity:0">
+	  <p id="slide-7-part-0" style="opacity:0;text-align:center">  We must state relationships,  </p>
+	  <p id="slide-7-part-1" style="opacity:0;text-align:center">   not procedures.   </p>
+	  <div id="author7" class="author" > Grace Hoper <div id="date7" class="date" > &nbsp (1962) </div> </div>
+	</div>
+
+	<div id="slide-8" class="slide" style="opacity:0">
+	  <div id="slide-8-part-0" style="text-align:center"> <iframe  width="420" height="315" src="https://www.youtube.com/embed/5HL22xsVK4c?start=2383&end=2532"}"></iframe></div>
+																				     <p> </p>	
+																				     <div id="author8" class="author" > Astor Castoriadis <div id="date8" class="date" > &nbsp(1989)  </div> </div>
+</div>	 
+</div>
+</div>
+</body>
 </html>

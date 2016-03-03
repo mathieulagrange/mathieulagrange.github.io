@@ -41,3 +41,7 @@ div.date {
     transition: opacity 16s;
     float: right;
 }
+
+div.centeredVerse {
+    text-align:center;
+}
