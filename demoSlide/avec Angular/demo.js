@@ -24,6 +24,9 @@ app.controller ("Demo", function ($scope, $timeout) {
     for (n = 0; n < opacity.length; ++n) {
 	opacity[n].fill(1);
     }
+    //opacity.forEach(function(o) {
+    //	o.fill(1);
+    //});
     opacity[10][5] = .7;
     opacity[10][6] = .7;
     opacity[1][8] = .7;
