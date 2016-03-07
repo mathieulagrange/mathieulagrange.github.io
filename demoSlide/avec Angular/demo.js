@@ -62,5 +62,5 @@ app.controller ("Demo", function ($scope, $timeout) {
 	if (n == 9){setTimeout(function(){ $scope.selectSlide(10)}, timings[n][timings[n].length-1]+5000);}
     }
     // Start with slide 1
-    $scope.selectSlide(10);
+    $scope.selectSlide(5);
 });

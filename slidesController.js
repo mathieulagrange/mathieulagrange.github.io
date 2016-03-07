@@ -5,20 +5,6 @@ app.controller("SlidesController", function($scope, $timeout, $interval) {
 	    {text:"First steps in the scientific community"},
 	    {text:"Compare your work with existing references"}]
 	},
-	{position: 1, text:"Ph.D. candidate", photo:"images/slide-phd.jpg", thumbnail:"images/thumb-phd.png", color:"#aae", textOpacity: 0, bullets:[
-	    {text:"Keep track of large amount of code and experiments"},
-	    {text:"Make your experimental results publishable"},
-	    {text:"Stay focused and efficient on the long run"}]
-	},
-	{position: 2, text:"Postdoctoral fellow", photo:"images/slide-postdoc.jpg", thumbnail:"images/thumb-postdoc.png", color:"#aea", textOpacity: 0, bullets:[
-	    {text:"Stay organized, with many different projects to juggle at once"},
-	    {text:"Publish!"}]
-	},
-	{position: 3, text:"Faculty", photo:"images/slide-tenure.jpg", thumbnail:"images/thumb-tenure.png", color:"#eaa", textOpacity: 0, bullets:[
-	    {text:"Easily switch between numerous projects"},
-	    {text:"Monitor your jobs while you're in meetings"},
-	    {text:"Standardize the way your students organize their code and data"}]
-	}
     ];
 
     var showBulletTimeouts = [];
