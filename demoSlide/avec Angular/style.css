@@ -30,14 +30,24 @@ div.slide div {
     transition: opacity 1s;
 }
 
+div.slide p {
+    transition: opacity 1s;
+}
+
+div.slide span {
+    transition: opacity 1s;
+}
+
 div.author {
-	    opacity: 0;
+    margin-top: 20px;
+    opacity: 0;
     transition: opacity 8s;
     float: right;
 }
 
 div.date {
-	    opacity: 0;
+    margin-top: 20px;
+    opacity: 0;
     transition: opacity 16s;
     float: right;
 }
