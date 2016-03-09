@@ -38,7 +38,7 @@
       
       <div id="menu" ng-class="isAbsolute && 'normalMenu' || 'fixedMenu'">
 	<div>
-	  <a href="" ng-click="scrollTo('research')">Research</a> &mdash;
+	  <a href="" ng-click="scrollTo('research')">Expertise</a> &mdash;
 	  <a href="" ng-click="scrollTo('reproducible')">Reproducible Research</a> &mdash;
 	  <a href="" ng-click="scrollTo('explanes')">ExpLanes</a> &mdash;
 	  <a href="" ng-click="scrollTo('contributions')">Contributions</a> &mdash;
@@ -47,34 +47,45 @@
       </div>
     
       <div id="page">
-
+	
 	<div class="carousel profileCarousel" ng-controller="SlidesController">
+	  <div style="text-align:center"> 
+	    Partly why I became interested in doing Scientific Research in the fields of <br>
+	    Computer Science, Signal Processing, Machine Learning, and Cognitive Psychology. 
+	  </div>
+	  <p class="demoLinks">  
+	    <span class="demoLink" ng-repeat="slide in slides" ng-class="{'bold':slide.position==0}"  ng-click="cycleTo(slide)"> 
+	      &mdash;  {{slide.text}} &mdash;
+	    </span>
+	  </p>
+	  
 	  <div class="carouselArrow carouselLeftArrow" ng-click="cycleSlides(-1)"></div>
 	  <div class="carouselArrow carouselRightArrow" ng-click="cycleSlides(1)"></div>
 	  <div class="slideContainer profileSlideContainer">
 	    <div class="slide profileSlide" ng-repeat="slide in slides" ng-style="{left:(900*slide.position)+'px', opacity:slide.opacity}">
-	      <img ng-src="{{slide.photo}}"/>
-	      <div class="profileTitle">{{slide.text}}</div>
-	      <div class="bullet" ng-repeat="bullet in slide.bullets" ng-style="bullet.style">{{bullet.text}}</div>
+	      <div  ng-include="'pages/'+slide.html"></div>
 	    </div>
 	  </div>
 	  <div class="profileThumbnails">
 	    <img ng-repeat="slide in slides" ng-class="{'big':slide.position==0}" ng-src="{{slide.thumbnail}}" ng-click="cycleTo(slide)"/>
 	  </div>
 	</div>
-
-	<div ng-repeat = "panel in panels">
-	  <h1 id="{{panel.anchor}}">{{panel.name}}</h1>
-	  <div class="panel"
-	       id="panel-{{$index}}"
-	       ng-include="panel.page">
-	  </div>
-	</div>
+      </div>
       
-	<div id="footer">
-<a href="http://www.cnrs.fr"><img height="72" src="images/cnrsLogo.png"></a>
-
+      <div ng-repeat = "panel in panels">
+	<h1 id="{{panel.anchor}}">{{panel.name}}</h1>
+	<div class="panel"
+	     id="panel-{{$index}}"
+	     ng-include="panel.page">
 	</div>
+      </div>
+      
+      <div id="footer">
+	Made with love, a tiny bit of <a href="https://angularjs.org/">Angular</a> <br>
+	and loads of help from <br>
+	Mathias Rossignol <br>
+	bless him <br><br>
+	<a href="http://www.cnrs.fr"><img height="60" src="images/cnrsLogo.png"></a>
       </div>
     </div>
   </body>

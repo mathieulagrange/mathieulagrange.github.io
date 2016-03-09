@@ -12,7 +12,7 @@ app.controller ("Demo", function ($scope, $timeout) {
 	[1000, 2500, 4000, 6000, 7500, 9000, 12000, 14000],
 	[1000, 3000, 5000, 8000, 10000, 12000],
 	[1000, 3000, 5000, 7000, 9000, 11000, 13000, 15000, 17000, 19000],
-	[1000, 3000, 5000, 8000, 11500, 14000, 16000, 19000, 22000, 24000, 26000, 29000, 30400, 34000, 39000, 41000], 
+	[1000, 3000, 6000, 10000, 13500, 18000, 20000, 22000, 26000, 28000, 30000, 32000, 34400, 38000, 43000, 46000, 49000, 54000], 
 	[1000, 3000, 5000, 7000],
 	[1000, 3000, 5000],
 	[1000, 3000, 6000], 
@@ -33,11 +33,11 @@ app.controller ("Demo", function ($scope, $timeout) {
     targetOpacity[4][5] = .6;
     targetOpacity[5][9] = .6;
     targetOpacity[6][1] = .7;
-    targetOpacity[6][6] = .7;
-    targetOpacity[6][8] = .7;
-    targetOpacity[6][10] = .7;
-    targetOpacity[6][12] = .7;
-    targetOpacity[6][15] = .6;
+    targetOpacity[6][7] = .7;
+    targetOpacity[6][9] = .7;
+    targetOpacity[6][11] = .7;
+    targetOpacity[6][13] = .7;
+    targetOpacity[6][17] = .6;
     targetOpacity[7][3] = .6;
     targetOpacity[8][2] = .6;
     
@@ -62,5 +62,5 @@ app.controller ("Demo", function ($scope, $timeout) {
 	if (n == 9){setTimeout(function(){ $scope.selectSlide(10)}, timings[n][timings[n].length-1]+5000);}
     }
     // Start with slide 1
-    $scope.selectSlide(5);
+    $scope.selectSlide(6);
 });

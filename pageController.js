@@ -1,9 +1,9 @@
 app.controller("PageController", function($scope, $timeout, $interval) {
 
     $scope.panels = [
-	{"name":"Research", "page":"pages/research.html", "anchor":"investigation"},
+	{"name":"Expertise", "page":"pages/research.html", "anchor":"investigation"},
 	{"name":"Reproducible Research", "page":"pages/reproducible.html", "anchor":"reproducible"},
-	{"name":"ExpLanes (EXPerimental PLANning for Engineering and Science)", "page":"pages/explanes.html", "anchor":"explanes"},
+	{"name":"ExpLanes", "page":"pages/explanes.html", "anchor":"explanes"},
 	{"name":"Contributions", "page":"pages/contributions.html", "anchor":"contributions"},
 	{"name":"Publications", "page":"pages/publications.html", "anchor":"publications"},
    ];
