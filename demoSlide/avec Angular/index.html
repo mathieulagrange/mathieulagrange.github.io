@@ -12,7 +12,7 @@
 
     <div id="page" ng-controller="Demo">
 
-      <!-- tous les attributs en "ng-" sont des attributs spécifiques à angular, qui font le binding dynamique data-view -->
+      <!-- tous les attributs en "ng-" sont des attributs spÃ©cifiques Ã  angular, qui font le binding dynamique data-view -->
       <p><a href="#" ng-click="selectSlide(0)">Poetry</a> - 
       	<a href="#" ng-click="selectSlide(1)">Literature</a> - 
         <a href="#" ng-click="selectSlide(8)">Philosophy</a> -
@@ -24,8 +24,8 @@
     	<a href="#" ng-click="selectSlide(7)">Computer Science</a>
       </p>
       
-      <!-- Une div positionnée en "absolute" sera positionnée relativement à la première div parente -->
-      <!-- qui est elle-même soit "absolute", soit "fixed", soit "relative" -->
+      <!-- Une div positionnÃ©e en "absolute" sera positionnÃ©e relativement Ã  la premiÃ¨re div parente -->
+      <!-- qui est elle-mÃªme soit "absolute", soit "fixed", soit "relative" -->
       <div style="position:relative">
 
 	<!-- ici la div a une class statique, "slide" et une classe dynamique: "visible", active uniquement quand selectedSlide==0 -->	
@@ -200,7 +200,7 @@
 	  <p>
 	    <div ng-style="{opacity:opacity[5][0]}" class="centeredVerse"> 
 	      <img src="images/M.jpg"  height="120" width="120"> 
-	      <span "style=margin-left:-20cm;">
+	      <span style="position:relative; top:-20px; left:-20px">
 		AN,
 	      </span>
 	    </div>
