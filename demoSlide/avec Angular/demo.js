@@ -55,10 +55,10 @@ app.controller ("Demo", function ($scope, $timeout) {
 	// set timers to set opacities to 1
 	timings[n].forEach(function(time, index) {
 	    mt = $timeout(function(){$scope.opacity[n][index] = 1;}, time);
-	    myTimeouts.push($timeout(mt));
+	    myTimeouts.push(mt);
 	    if (targetOpacity[n][index] != 1) {
 		mt = $timeout(function(){$scope.opacity[n][index] = targetOpacity[n][index];}, time+500);
-		myTimeouts.push($timeout(mt));
+		myTimeouts.push(mt);
 	    }
 	});
 	// Set slide n as the currently displayed one
