@@ -19,6 +19,8 @@ app.controller ("Demo", function ($scope, $timeout) {
 	[1000, 3000, 6000, 11000, 14000, 17000, 19000], 
     ];
 
+    var myTimeouts = [];
+
     var targetOpacity = timings.map(function(v){return v.map(function(){return 1;});});
     //opacity.forEach(function(o) {
     //	o.fill(1);
@@ -48,12 +50,16 @@ app.controller ("Demo", function ($scope, $timeout) {
 	}
 
 	$scope.opacity = timings.map(function(v){return v.map(function(){return 0;});});
+	while (myTimeouts.length) $timeout.cancel(myTimeouts.pop());
 
 	// set timers to set opacities to 1
 	timings[n].forEach(function(time, index) {
-	    $timeout(function(){$scope.opacity[n][index] = 1;}, time);
-	    if (targetOpacity[n][index] != 1)
-		$timeout(function(){$scope.opacity[n][index] = targetOpacity[n][index];}, time+500);
+	    mt = $timeout(function(){$scope.opacity[n][index] = 1;}, time);
+	    myTimeouts.push($timeout(mt));
+	    if (targetOpacity[n][index] != 1) {
+		mt = $timeout(function(){$scope.opacity[n][index] = targetOpacity[n][index];}, time+500);
+		myTimeouts.push($timeout(mt));
+	    }
 	});
 	// Set slide n as the currently displayed one
 	$scope.selectedSlide = n;
