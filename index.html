@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" /> 
     <title>Mathieu Lagrange</title>
-<link rel="icon" type="image/png" href="images/cnrsIco.png" />
+    <link rel="icon" type="image/png" href="images/cnrsIco.png" />
     <script src="angular.min.js"></script>
     <script src="utils.js"></script>
     <script src="app.js"></script>
@@ -23,16 +23,16 @@
 
       <div id="top">
       	<div style="width: auto; text-align: left; display: inline-block">
-	<h2 style="font-size: 48px; margin-bottom: 10px">
-	  <span style="position:relative">
-	    <div style="position:absolute; left:-210px; top: -5px">
-	      <img src="images/mathieu.jpg" style="width: 200px"/>
-	    </div>
-	    Mathieu Lagrange
-	  </span>
-	</h2>
-	<h3 style="font-size: 16px; font-style: italic">CNRS researcher @ ADTSI team <br> <a href="http://www.irccyn.ec-nantes.fr/en">IRCCYN</a>, <a href="http://www.ec-nantes.fr/">Ecole Centrale de Nantes</a></h3>
-	<h4 style="font-size: 16px; font-style: italic">mathieu dot lagrange at cnrs dot fr</h4>
+	  <h2 style="font-size: 48px; margin-bottom: 10px">
+	    <span style="position:relative">
+	      <div style="position:absolute; left:-210px; top: -5px">
+		<img src="images/mathieu.png" style="width: 200px"/>
+	      </div>
+	      Mathieu Lagrange
+	    </span>
+	  </h2>
+	  <h3 style="font-size: 16px; font-style: italic">CNRS researcher @ ADTSI team <br> <a href="http://www.irccyn.ec-nantes.fr/en">IRCCYN</a>, <a href="http://www.ec-nantes.fr/">Ecole Centrale de Nantes</a></h3>
+	  <h4 style="font-size: 16px; font-style: italic">mathieu dot lagrange at cnrs dot fr</h4>
 	</div>
       </div>
       
@@ -45,40 +45,39 @@
 	  <a href="" ng-click="scrollTo('publications')">Publications</a>
 	</div>
       </div>
-    
+      
       <div id="page">
 	<div style="text-align:center"> 
 	  Partly why I became interested in doing Scientific Research in the fields of <br>
 	  Computer Science, Signal Processing, Machine Learning, and Cognitive Psychology. 
 	</div>
-	<p class="demoLinks">  
-	  <span class="demoLink" ng-class="{bold:0==currentSlide}" ng-click="currentSlide=0">Poetry</span>&mdash;
-	  <span class="demoLink" ng-class="{bold:1==currentSlide}" ng-click="currentSlide=1">Poetry</span>&mdash;
-	  <span class="demoLink" ng-class="{bold:2==currentSlide}" ng-click="currentSlide=2">Poetry</span>&mdash;
-	  <span class="demoLink" ng-class="{bold:3==currentSlide}" ng-click="currentSlide=3">Literature</span>&mdash;
-	  <span class="demoLink" ng-class="{bold:4==currentSlide}" ng-click="currentSlide=4">Philosophy</span>&mdash;
-	  <span class="demoLink" ng-class="{bold:5==currentSlide}" ng-click="currentSlide=5">Science</span>&mdash;
-	  <span class="demoLink" ng-class="{bold:6==currentSlide}" ng-click="currentSlide=6">Wisdom</span>&mdash;
-	  <span class="demoLink" ng-class="{bold:7==currentSlide}" ng-click="currentSlide=7">Religion</span>&mdash;
-	  <span class="demoLink" ng-class="{bold:8==currentSlide}" ng-click="currentSlide=8">Research</span>&mdash;
-	  <span class="demoLink" ng-class="{bold:9==currentSlide}" ng-click="currentSlide=9">Mathematics</span>&mdash;
-	  <span class="demoLink" ng-class="{bold:10==currentSlide}" ng-click="currentSlide=10">Computer Science</span>&mdash;
-	</p>
-	  <!-- <span class="demoLink" ng-repeat="slide in slides" ng-class="{'bold':slide.position==currentSlide}"  ng-click="cycleTo(slide)">  -->
+	<div class="carousel profileCarousel" ng-controller="SlidesController">	  
+	  <p class="demoLinks">  
+	    <span class="demoLink" ng-class="{bold:0==selectedSlide}" ng-click="selectSlide(0)">Poetry</span>&mdash;
+	    <span class="demoLink" ng-class="{bold:1==selectedSlide}" ng-click="selectSlide(1)">Poetry</span>&mdash;
+	    <span class="demoLink" ng-class="{bold:2==selectedSlide}" ng-click="selectSlide(2)">Poetry</span>&mdash;
+	    <span class="demoLink" ng-class="{bold:3==selectedSlide}" ng-click="selectSlide(3)">Literature</span>&mdash;
+	    <span class="demoLink" ng-class="{bold:4==selectedSlide}" ng-click="selectSlide(4)">Philosophy</span>&mdash;
+	    <span class="demoLink" ng-class="{bold:5==selectedSlide}" ng-click="selectSlide(5)">Science</span>&mdash;
+	    <span class="demoLink" ng-class="{bold:6==selectedSlide}" ng-click="selectSlide(6)">Wisdom</span>&mdash;
+	    <span class="demoLink" ng-class="{bold:7==selectedSlide}" ng-click="selectSlide(7)">Religion</span>&mdash;
+	    <span class="demoLink" ng-class="{bold:8==selectedSlide}" ng-click="selectSlide(8)">Research</span>&mdash;
+	    <span class="demoLink" ng-class="{bold:9==selectedSlide}" ng-click="selectSlide(9)">Mathematics</span>&mdash;
+	    <span class="demoLink" ng-class="{bold:10==selectedSlide}" ng-click="selectSlide(10)">Computer Science</span>
+	  </p>
+	  <!-- <span class="demoLink" ng-repeat="slide in slides" ng-class="{'bold':slide.position==selectedSlide}"  ng-click="cycleTo(slide)">  -->
 	  <!--   &mdash;  {{slide.text}} &mdash; -->
 	  <!-- </span> -->
-	</p>
-	
-	<div class="carousel profileCarousel" ng-controller="SlidesController">	  
-	  <div class="carouselArrow carouselLeftArrow" ng-show="currentSlide != 0" ng-click="currentSlide = currentSlide - 1"></div>
-	  <div class="carouselArrow carouselRightArrow" ng-show="currentSlide != 10" ng-click="currentSlide = currentSlide + 1"></div>
+	  
+	  <div class="carouselArrow carouselLeftArrow" ng-show="selectedSlide != 0" ng-click="selectedSlide = selectedSlide - 1"></div>
+	  <div class="carouselArrow carouselRightArrow" ng-show="selectedSlide != 10" ng-click="selectedSlide = selectedSlide + 1"></div>
 	  <div class="slideContainer profileSlideContainer">
 	    <div class="slide profileSlide" ng-repeat="slide in slides" ng-style="{left:(900*slide.position)+'px', opacity:slide.opacity}">
 	      <div  ng-include="'pages/'+slide.html"></div>
 	    </div>
 	  </div>
 	  <div class="profileThumbnails">
-	    <img ng-repeat="slide in slides" ng-class="{'big':slide.position==currentSlide}" ng-src="{{slide.thumbnail}}" ng-click="currentSlide=slide.position"/>
+	    <img ng-repeat="slide in slides" ng-class="{'big':slide.position==selectedSlide}" ng-src="{{slide.thumbnail}}" ng-click="selectSlide(slide.position)"/>
 	  </div>
 	</div>
       </div>
