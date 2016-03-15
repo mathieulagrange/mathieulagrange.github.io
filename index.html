@@ -51,42 +51,47 @@
 	  Partly why I became interested in doing Scientific Research in the fields of <br>
 	  Computer Science, Signal Processing, Machine Learning, and Cognitive Psychology. 
 	</div>
-	<div class="carousel profileCarousel" ng-controller="SlidesController">	  
-	  <p class="demoLinks">  
-	    <span class="demoLink" ng-class="{bold:0==selectedSlide}" ng-click="selectSlide(0)">Poetry</span>&mdash;
-	    <span class="demoLink" ng-class="{bold:1==selectedSlide}" ng-click="selectSlide(1)">Poetry</span>&mdash;
-	    <span class="demoLink" ng-class="{bold:2==selectedSlide}" ng-click="selectSlide(2)">Poetry</span>&mdash;
-	    <span class="demoLink" ng-class="{bold:3==selectedSlide}" ng-click="selectSlide(3)">Literature</span>&mdash;
-	    <span class="demoLink" ng-class="{bold:4==selectedSlide}" ng-click="selectSlide(4)">Philosophy</span>&mdash;
-	    <span class="demoLink" ng-class="{bold:5==selectedSlide}" ng-click="selectSlide(5)">Science</span>&mdash;
-	    <span class="demoLink" ng-class="{bold:6==selectedSlide}" ng-click="selectSlide(6)">Wisdom</span>&mdash;
-	    <span class="demoLink" ng-class="{bold:7==selectedSlide}" ng-click="selectSlide(7)">Religion</span>&mdash;
-	    <span class="demoLink" ng-class="{bold:8==selectedSlide}" ng-click="selectSlide(8)">Research</span>&mdash;
-	    <span class="demoLink" ng-class="{bold:9==selectedSlide}" ng-click="selectSlide(9)">Mathematics</span>&mdash;
-	    <span class="demoLink" ng-class="{bold:10==selectedSlide}" ng-click="selectSlide(10)">Computer Science</span>
+	<div ng-controller="SlidesController">	  
+	  <p class="profileLinks">  
+	    <span class="profileLink" ng-class="{bold:0==selectedSlide}" ng-click="selectSlide(0)">Poetry</span>&mdash;
+	    <span class="profileLink" ng-class="{bold:1==selectedSlide}" ng-click="selectSlide(1)">Poetry</span>&mdash;
+	    <span class="profileLink" ng-class="{bold:2==selectedSlide}" ng-click="selectSlide(2)">Poetry</span>&mdash;
+	    <span class="profileLink" ng-class="{bold:3==selectedSlide}" ng-click="selectSlide(3)">Literature</span>&mdash;
+	    <span class="profileLink" ng-class="{bold:4==selectedSlide}" ng-click="selectSlide(4)">Philosophy</span>&mdash;
+	    <span class="profileLink" ng-class="{bold:5==selectedSlide}" ng-click="selectSlide(5)">Science</span>&mdash;
+	    <span class="profileLink" ng-class="{bold:6==selectedSlide}" ng-click="selectSlide(6)">Wisdom</span>&mdash;
+	    <span class="profileLink" ng-class="{bold:7==selectedSlide}" ng-click="selectSlide(7)">Religion</span>&mdash;
+	    <span class="profileLink" ng-class="{bold:8==selectedSlide}" ng-click="selectSlide(8)">Research</span>&mdash;
+	    <span class="profileLink" ng-class="{bold:9==selectedSlide}" ng-click="selectSlide(9)">Mathematics</span>&mdash;
+	    <span class="profileLink" ng-class="{bold:10==selectedSlide}" ng-click="selectSlide(10)">Computer Science</span>
 	  </p>
-	  <!-- <span class="demoLink" ng-repeat="slide in slides" ng-class="{'bold':slide.position==selectedSlide}"  ng-click="cycleTo(slide)">  -->
+	  <!-- <span class="profileLink" ng-repeat="slide in slides" ng-class="{'bold':slide.position==selectedSlide}"  ng-click="cycleTo(slide)">  -->
 	  <!--   &mdash;  {{slide.text}} &mdash; -->
 	  <!-- </span> -->
-	  
-	  <div class="carouselArrow carouselLeftArrow" ng-show="selectedSlide != 0" ng-click="selectedSlide = selectedSlide - 1"></div>
-	  <div class="carouselArrow carouselRightArrow" ng-show="selectedSlide != 10" ng-click="selectedSlide = selectedSlide + 1"></div>
-	  <div class="slideContainer profileSlideContainer">
-	    <div class="slide profileSlide" ng-repeat="slide in slides" ng-style="{left:(900*slide.position)+'px', opacity:slide.opacity}">
-	      <div  ng-include="'pages/'+slide.html"></div>
+	  <div class="carousel profileCarousel">	
+	    <div class="carouselArrow carouselLeftArrow" ng-show="selectedSlide != 0" ng-click="selectSlide(selectedSlide-1)"></div>
+	    <div class="carouselArrow carouselRightArrow" ng-show="selectedSlide != 10" ng-click="selectSlide(selectedSlide+1)"></div>
+	    <div class="slideContainer profileSlideContainer">
+	      <div style="padding:20px">
+	      <div class="slide profileSlide" ng-repeat="slide in slides", opacity:slide.opacity}"> <!-- fallait virer ca : ng-style="{left:(900*slide.position)+'px' -->
+		<div  ng-include="'pages/'+slide.html"></div>
+	      </div>
 	    </div>
-	  </div>
-	  <div class="profileThumbnails">
-	    <img ng-repeat="slide in slides" ng-class="{'big':slide.position==selectedSlide}" ng-src="{{slide.thumbnail}}" ng-click="selectSlide(slide.position)"/>
+	    </div>
+	    <div class="profileThumbnails">
+	      <img ng-repeat="slide in slides" ng-class="{'big':slide.position==selectedSlide}" ng-src="{{slide.thumbnail}}" ng-click="selectSlide(slide.position)"/>
+	    </div>
 	  </div>
 	</div>
       </div>
       
       <div ng-repeat = "panel in panels">
 	<h1 id="{{panel.anchor}}">{{panel.name}}</h1>
-	<div class="panel"
-	     id="panel-{{$index}}"
-	     ng-include="panel.page">
+	<div class="panel">
+	     <div class="panelInside"
+		  id="panel-{{$index}}"
+		  ng-include="panel.page">
+	     </div>
 	</div>
       </div>
       

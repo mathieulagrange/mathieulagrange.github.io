@@ -9,7 +9,7 @@ body {
     font-family: Helvetica, Arial, sans serif;
     font-size: 12px;
     background-color: #eeeeee;
-    color: #540;
+    color: black;
     line-height: 180%;
 }
 
@@ -19,6 +19,12 @@ div.panel {
     color: black;
     padding: 15px;
     font-size: 16px;
+}
+
+div.panelInside {
+    background-color: #eeeeee;
+    margin: 10px;
+    padding: 15px;
 }
 
 div#footer {
@@ -110,20 +116,62 @@ div.slideContainer {
 }
 
 div.profileCarousel {
-    height: 370px;
+    height: 440px;
+    margin: 20px;
 }
 
 div.profileSlideContainer {
     height: 300px;
+    background-color: #fefefe;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 30px;
 }
+
 
 div.slide {
     position: absolute;
     top: 0px;
     width: 800px;
-    transition: left 0.5s;
+    transition: 1s;
     overflow: hidden;
 }
+
+div.slide.visible {
+    opacity: 1;
+}
+
+div.slide div {
+    transition: opacity 1s;
+}
+
+div.slide p {
+    transition: opacity 1s;
+}
+
+div.slide span {
+    transition: opacity 1s;
+}
+
+p.profileLinks {
+    text-align: center;
+    vertical-align: middle;
+    height: 25px;
+    width: 100%;
+    color: black;
+}
+
+span.profileLink {
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+span.profileLink:hover {
+    text-decoration: underline;
+}
+
 
 div.profileSlide {
     height: 300px;
@@ -137,32 +185,35 @@ div.profileSlide img {
 div.profileThumbnails {
     position: absolute;
     top: 320px;
-    left: 395px;
-    height: 48px;
-    width: 170px;
+ /*   left: 395px; */
+    height: 300px;
+    width: 100%;
 }
 
 div.profileThumbnails img {
-    width: 32px;
-    height: 32px;
+    width: 64px;
+    height: 64px;
     float: left;
     cursor: pointer;
     margin-right: 5px;
     transition: all .5s;
     margin-top: 8px;
+    border: 4px solid black;
+    border-radius:  32px;
 }
 
 div.profileThumbnails img.big {
-    width: 48px;
-    height: 48px;
+    width: 128px;
+    height: 128px;
     margin-top: 0px;
+    border-radius:  64px;
 }
 
 div.profileTitle {
     position: absolute;
     right: 20px;
     top: 20px;
-    font-size: 24px;
+    font-size: 20px;
     color: #222;
     transition: opacity 0.7s;
 }
@@ -272,62 +323,24 @@ div.panel li {
     margin-top: 15px;
 }
 
-div.demoCarousel {
-    height: 820px;
-    margin-top: 15px;
-}
-
-p.demoLinks {
-    text-align: center;
-    vertical-align: middle;
-    height: 25px;
-    width: 100%;
-    color: #540;
-}
-
-span.demoLink {
-    cursor: pointer;
-    margin-left: 15px;
-    margin-right: 15px;
-    width: 200px;
-}
-
-span.demoLink:hover {
-    text-decoration: underline;
-}
-
-div.demoSlideContainer {
-    height: 775px;
-    top: 45px;
-}
-
-div.demoSlide {
-    height: 775px;
-}
-
-div.demoCarousel h3 {
-    margin: 0px;
-    height: 35px;
-}
-
-div.demoCarousel p {
-    margin: 0px;
-    height: 30px;
-}
-
-div.demoCarousel div.demoInclude {
-    height: 80px;
-}
-
-div.demoCarousel h4 {
-    margin: 0px;
-    height: 30px;
-}
-
-div.demoCarousel iframe {
-    margin: 0px;
-}
-
 .bold {
     font-weight: bold;
+}
+
+div.author {
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 8s;
+    float: right;
+}
+
+div.date {
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 16s;
+    float: right;
+}
+
+div.centeredVerse {
+    text-align:center;
 }
