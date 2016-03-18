@@ -9,8 +9,8 @@ app.controller("SlidesController", function($scope, $timeout, $interval) {
 	[1000, 3000, 5000, 7000, 9000, 11000],
 	[1000, 2500, 4000, 6000, 7500, 9000, 12000, 14000],
 	[1000, 3000, 5000, 8000, 10000, 12000],
-	[1000, 3000, 5000, 7000, 9000, 11000, 13000, 15000, 17000, 19000],
 	[1000, 3000, 6000, 10000, 13500, 18000, 20000, 22000, 26000, 28000, 30000, 32000, 34400, 38000, 43000, 46000, 49000, 54000], 
+	[1000, 3000, 5000, 7000, 9000, 11000, 13000, 15000, 17000, 19000],
 	[1000, 3000, 5000, 7000],
 	[1000, 3000, 5000],
 	[1000, 3000, 6000], 
@@ -28,35 +28,40 @@ app.controller("SlidesController", function($scope, $timeout, $interval) {
     targetOpacity[2][5] = .6;
     targetOpacity[3][7] = .6;
     targetOpacity[4][5] = .6;
-    targetOpacity[5][9] = .6;
-    targetOpacity[6][1] = .7;
-    targetOpacity[6][7] = .7;
-    targetOpacity[6][9] = .7;
-    targetOpacity[6][11] = .7;
-    targetOpacity[6][13] = .7;
-    targetOpacity[6][17] = .6;
+    targetOpacity[6][9] = .6;
+    targetOpacity[5][1] = .7;
+    targetOpacity[5][7] = .7;
+    targetOpacity[5][9] = .7;
+    targetOpacity[5][11] = .7;
+    targetOpacity[5][13] = .7;
+    targetOpacity[5][17] = .6;
     targetOpacity[7][3] = .6;
     targetOpacity[8][2] = .6;
-    
+
+// remove position ?    
+
     $scope.slides = [
-	{position: 0, text:"Poetry", html:"brautigan1.html", thumbnail:"images/headBrautigan.png", color:"#eea", textOpacity: 0},	
-	{position: 1, text:"Poetry", html:"brautigan2.html", thumbnail:"images/headBrautigan.png", color:"#eea", textOpacity: 0},
-	{position: 2, text:"Poetry", html:"brautigan3.html", thumbnail:"images/headBrautigan.png", color:"#eea", textOpacity: 0},
-	{position: 3, text:"Literature", html:"gibson.html", thumbnail:"images/headGibson.png", color:"#eea", textOpacity: 0},
-	{position: 4, text:"Philosophy", html:"castoriadis.html", thumbnail:"images/headCastoriadis.png", color:"#eea", textOpacity: 0},
-	{position: 5, text:"Science", html:"bacon.html", thumbnail:"images/headBacon.png", color:"#eea", textOpacity: 0},
-	{position: 6, text:"Wisdom", html:"elephant.html", thumbnail:"images/headElephant.png", color:"#eea", textOpacity: 0},
-	{position: 7, text:"Religion", html:"turing.html", thumbnail:"images/headTuring.png", color:"#eea", textOpacity: 0},
-	{position: 8, text:"Research", html:"bachelard.html", thumbnail:"images/headBachelard.png", color:"#eea", textOpacity: 0},
-	{position: 9, text:"Mathematics", html:"vonNeumann.html", thumbnail:"images/headVonNeumann.png", color:"#eea", textOpacity: 0},
-	{position: 10, text:"Computer Science", html:"hoper.html", thumbnail:"images/headHoper.png", color:"#eea", textOpacity: 1}
+	{position: [0, 9, 10], text:"Poetry", html:"brautigan1.html", thumbnail:"images/headBrautigan.png", color:"#eea", textOpacity: 0},	
+	{position: [9], html:"brautigan2.html", color:"#eea", textOpacity: 0},
+	{position: [10], html:"brautigan3.html", color:"#eea", textOpacity: 0},
+	{position: [1], text:"Literature", html:"gibson.html", thumbnail:"images/headGibson.png", color:"#eea", textOpacity: 0},
+	{position: [2], text:"Philosophy", html:"castoriadis.html", thumbnail:"images/headCastoriadis.png", color:"#eea", textOpacity: 0},
+	{position: [3], text:"Wisdom", html:"elephant.html", thumbnail:"images/headElephant.png", color:"#eea", textOpacity: 0},
+	{position: [4], text:"Science", html:"bacon.html", thumbnail:"images/headBacon.png", color:"#eea", textOpacity: 0},
+	{position: [5], text:"Religion", html:"turing.html", thumbnail:"images/headTuring.png", color:"#eea", textOpacity: 0},
+	{position: [6], text:"Research", html:"bachelard.html", thumbnail:"images/headBachelard.png", color:"#eea", textOpacity: 0},
+	{position: [7], text:"Mathematics", html:"vonNeumann.html", thumbnail:"images/headVonNeumann.png", color:"#eea", textOpacity: 0},
+	{position: [8], text:"Computer Science", html:"hoper.html", thumbnail:"images/headHoper.png", color:"#eea", textOpacity: 1}
     ];
 
     $scope.selectSlide = function(n) {
+	
+	if (n.constructor === Array)
+	    n = n[0];
 	console.log(n+" "+$scope.selectedSlide);
-//	if (n > 8 && $scope.selectedSlide != 0 && $scope.selectedSlide != 9) {
-//	    return;
-//	}
+	if (n > 8 && $scope.selectedSlide != 0 && $scope.selectedSlide != 9) {
+	    return;
+	}
 
 	$scope.opacity = timings.map(function(v){return v.map(function(){return 0;});});
 	while (myTimeouts.length) $timeout.cancel(myTimeouts.pop());
@@ -73,10 +78,10 @@ app.controller("SlidesController", function($scope, $timeout, $interval) {
 	// Set slide n as the currently displayed one
 	$scope.selectedSlide = n;
 	
- //       if (n == 0) {setTimeout(function(){ $scope.selectSlide(9)}, timings[n][timings[n].length-1]+4000);}
-//	if (n == 9){setTimeout(function(){ $scope.selectSlide(10)}, timings[n][timings[n].length-1]+5000);}
+        if (n == 0) {setTimeout(function(){ $scope.selectSlide(9)}, timings[n][timings[n].length-1]+4000);}
+	if (n == 9){setTimeout(function(){ $scope.selectSlide(10)}, timings[n][timings[n].length-1]+5000);}
     }	
 
     // first slide to show
-    $scope.selectSlide(6);
+    $scope.selectSlide(4);
 });

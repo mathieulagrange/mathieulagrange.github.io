@@ -53,24 +53,20 @@
 	</div>
 	<div ng-controller="SlidesController">	  
 	  <p class="profileLinks">  
-	    <span class="profileLink" ng-class="{bold:0==selectedSlide}" ng-click="selectSlide(0)">Poetry</span>&mdash;
-	    <span class="profileLink" ng-class="{bold:1==selectedSlide}" ng-click="selectSlide(1)">Poetry</span>&mdash;
-	    <span class="profileLink" ng-class="{bold:2==selectedSlide}" ng-click="selectSlide(2)">Poetry</span>&mdash;
-	    <span class="profileLink" ng-class="{bold:3==selectedSlide}" ng-click="selectSlide(3)">Literature</span>&mdash;
-	    <span class="profileLink" ng-class="{bold:4==selectedSlide}" ng-click="selectSlide(4)">Philosophy</span>&mdash;
-	    <span class="profileLink" ng-class="{bold:5==selectedSlide}" ng-click="selectSlide(5)">Science</span>&mdash;
-	    <span class="profileLink" ng-class="{bold:6==selectedSlide}" ng-click="selectSlide(6)">Wisdom</span>&mdash;
-	    <span class="profileLink" ng-class="{bold:7==selectedSlide}" ng-click="selectSlide(7)">Religion</span>&mdash;
-	    <span class="profileLink" ng-class="{bold:8==selectedSlide}" ng-click="selectSlide(8)">Research</span>&mdash;
-	    <span class="profileLink" ng-class="{bold:9==selectedSlide}" ng-click="selectSlide(9)">Mathematics</span>&mdash;
-	    <span class="profileLink" ng-class="{bold:10==selectedSlide}" ng-click="selectSlide(10)">Computer Science</span>
+	    <span class="profileLink" ng-class="{bold:0==selectedSlide||9==selectedSlide||10==selectedSlide}" ng-click="selectSlide(0)">Poetry</span>&mdash;
+	    <span class="profileLink" ng-class="{bold:1==selectedSlide}" ng-click="selectSlide(3)">Literature</span>&mdash;
+	    <span class="profileLink" ng-class="{bold:2==selectedSlide}" ng-click="selectSlide(4)">Philosophy</span>&mdash;
+	    <span class="profileLink" ng-class="{bold:3==selectedSlide}" ng-click="selectSlide(5)">Wisdom</span>&mdash;
+	    <span class="profileLink" ng-class="{bold:4==selectedSlide}" ng-click="selectSlide(6)">Science</span>&mdash;
+	    <span class="profileLink" ng-class="{bold:5==selectedSlide}" ng-click="selectSlide(7)">Religion</span>&mdash;
+	    <span class="profileLink" ng-class="{bold:6==selectedSlide}" ng-click="selectSlide(8)">Research</span>&mdash;
+	    <span class="profileLink" ng-class="{bold:7==selectedSlide}" ng-click="selectSlide(9)">Mathematics</span>&mdash;
+	    <span class="profileLink" ng-class="{bold:8==selectedSlide}" ng-click="selectSlide(10)">Computer Science</span>
 	  </p>
 	  <!-- <span class="profileLink" ng-repeat="slide in slides" ng-class="{'bold':slide.position==selectedSlide}"  ng-click="cycleTo(slide)">  -->
 	  <!--   &mdash;  {{slide.text}} &mdash; -->
 	  <!-- </span> -->
 	  <div class="carousel profileCarousel">	
-	    <div class="carouselArrow carouselLeftArrow" ng-show="selectedSlide != 0" ng-click="selectSlide(selectedSlide-1)"></div>
-	    <div class="carouselArrow carouselRightArrow" ng-show="selectedSlide != 10" ng-click="selectSlide(selectedSlide+1)"></div>
 	    <div class="slideContainer profileSlideContainer">
 	      <div style="padding:20px">
 	      <div class="slide profileSlide" ng-repeat="slide in slides", opacity:slide.opacity}"> <!-- fallait virer ca : ng-style="{left:(900*slide.position)+'px' -->
@@ -79,7 +75,7 @@
 	    </div>
 	    </div>
 	    <div class="profileThumbnails">
-	      <img ng-repeat="slide in slides" ng-class="{'big':slide.position==selectedSlide}" ng-src="{{slide.thumbnail}}" ng-click="selectSlide(slide.position)"/>
+	      <img ng-repeat="slide in slides" ng-class="{'big':slide.position.indexOf(selectedSlide) > -1}" ng-src="{{slide.thumbnail}}" ng-click="selectSlide(slide.position)" ng-if="slide.thumbnail" />
 	    </div>
 	  </div>
 	</div>
@@ -96,10 +92,10 @@
       </div>
       
       <div id="footer">
-	Made with love, a tiny bit of <a href="https://angularjs.org/">Angular</a> <br>
+	Made with love, a tiny bit of <a href="https://angularjs.org/">angularJs</a> <br>
 	and loads of help from <br>
 	Mathias Rossignol <br>
-	bless him <br><br>
+	bless him <br>
 	<a href="http://www.cnrs.fr"><img height="60" src="images/cnrsLogo.png"></a>
       </div>
     </div>

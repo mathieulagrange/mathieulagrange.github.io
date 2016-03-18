@@ -54,7 +54,7 @@ div#top {
     width: 100%;
     position: absolute;
     top: 10px;
-    left: 0px;
+    left: 40px;
     text-align: center;
     margin-top: 40px;
     font-family: 'Libre Baskerville';
@@ -80,31 +80,6 @@ div.carousel {
     position: relative;
     width: 960px;
     margin: auto;
-}
-
-div.carouselArrow {
-    position: absolute;
-    top: 132px;
-    width: 24px;
-    height: 36px;
-    opacity: 0.6;
-    transition: opacity 0.1s;
-    cursor: pointer;
-    z-index: 10;
-}
-
-div.carouselArrow:hover {
-    opacity: 0.8;
-}
-
-div.carouselLeftArrow {
-    left: 28px;
-    background: url(images/l-arrow.png);
-}
-
-div.carouselRightArrow {
-    left: 908px;
-    background: url(images/r-arrow.png);
 }
 
 div.slideContainer {
@@ -185,28 +160,28 @@ div.profileSlide img {
 div.profileThumbnails {
     position: absolute;
     top: 320px;
- /*   left: 395px; */
+    left: 210px; 
     height: 300px;
     width: 100%;
 }
 
 div.profileThumbnails img {
-    width: 64px;
-    height: 64px;
+    width: 50px;
+    height: 50px;
     float: left;
     cursor: pointer;
     margin-right: 5px;
     transition: all .5s;
     margin-top: 8px;
     border: 4px solid black;
-    border-radius:  32px;
+    border-radius:  25px;
 }
 
 div.profileThumbnails img.big {
-    width: 128px;
-    height: 128px;
+    width: 100px;
+    height: 100px;
     margin-top: 0px;
-    border-radius:  64px;
+    border-radius:  50px;
 }
 
 div.profileTitle {
@@ -241,7 +216,7 @@ div.tab {
     width: 20%;
     cursor: pointer;
     background-color: #cb8;
-    color: #430;
+    color: black;
     text-align: center;
     height: 40px;
     line-height: 40px;
@@ -279,7 +254,7 @@ div#menu a {
     margin-left: 15px;
     margin-right: 15px;
     text-decoration: none;
-    color: #540;
+    color: black;
     font-family: 'Libre Baskerville';
     font-size; 15px;
 }
@@ -315,8 +290,8 @@ h1 {
     position: relative;
     left: -20px;
     font-family: 'Libre Baskerville';
-    text-align: left;
-    margin-top: 30px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 div.panel li {
