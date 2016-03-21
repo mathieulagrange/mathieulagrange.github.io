@@ -18,29 +18,27 @@
   </head>
 
   <body>
-    
     <div ng-controller="PageController">
-
       <div id="top">
       	<div style="width: auto; text-align: left; display: inline-block">
-	  <h2 style="font-size: 48px; margin-bottom: 10px">
+	  <h2 style="font-size: 24px; margin-bottom: 10px">
 	    <span style="position:relative">
-	      <div style="position:absolute; left:-210px; top: -5px">
-		<img src="images/mathieu.png" style="width: 200px"/>
+	      <div style="position:absolute; left:-170px; top: -5px">
+		<img src="images/mathieu.png" style="width: 140px"/>
 	      </div>
 	      Mathieu Lagrange
 	    </span>
 	  </h2>
-	  <h3 style="font-size: 16px; font-style: italic">CNRS researcher @ ADTSI team <br> <a href="http://www.irccyn.ec-nantes.fr/en">IRCCYN</a>, <a href="http://www.ec-nantes.fr/">Ecole Centrale de Nantes</a></h3>
-	  <h4 style="font-size: 16px; font-style: italic">mathieu dot lagrange at cnrs dot fr</h4>
+	  <h3 style="font-size: 12px; font-style: italic"><a href="http://www.cnrs.fr/">CNRS</a> researcher @ ADTSI team <br> <a href="http://www.irccyn.ec-nantes.fr/en">IRCCYN</a>, <a href="http://www.ec-nantes.fr/">Ecole Centrale de Nantes</a><br>	  <span style="font-size: 12px; font-style: italic">mathieu dot lagrange at cnrs dot fr</span></h3>
+
 	</div>
       </div>
       
       <div id="menu" ng-class="isAbsolute && 'normalMenu' || 'fixedMenu'">
 	<div>
 	  <a href="" ng-click="scrollTo('research')">Expertise</a> &mdash;
-	  <a href="" ng-click="scrollTo('reproducible')">Reproducible Research</a> &mdash;
 	  <a href="" ng-click="scrollTo('explanes')">ExpLanes</a> &mdash;
+	  <a href="" ng-click="scrollTo('reproducible')">Reproducible Research</a> &mdash;
 	  <a href="" ng-click="scrollTo('contributions')">Contributions</a> &mdash;
 	  <a href="" ng-click="scrollTo('publications')">Publications</a>
 	</div>
@@ -48,20 +46,22 @@
       
       <div id="page">
 	<div style="text-align:center"> 
-	  Partly why I became interested in doing Scientific Research in the fields of <br>
-	  Computer Science, Signal Processing, Machine Learning, and Cognitive Psychology. 
+	<img style="width:70px" src="images/sepLine.png"/>
+	<br>
+	Partly why I became interested in doing Scientific Research in the fields of <br>
+	Computer Science, Signal Processing, Machine Learning, and Cognitive Psychology. 
 	</div>
+	
 	<div ng-controller="SlidesController">	  
 	  <p class="profileLinks">  
-	    <span class="profileLink" ng-class="{bold:0==selectedSlide||9==selectedSlide||10==selectedSlide}" ng-click="selectSlide(0)">Poetry</span>&mdash;
-	    <span class="profileLink" ng-class="{bold:1==selectedSlide}" ng-click="selectSlide(3)">Literature</span>&mdash;
-	    <span class="profileLink" ng-class="{bold:2==selectedSlide}" ng-click="selectSlide(4)">Philosophy</span>&mdash;
-	    <span class="profileLink" ng-class="{bold:3==selectedSlide}" ng-click="selectSlide(5)">Wisdom</span>&mdash;
-	    <span class="profileLink" ng-class="{bold:4==selectedSlide}" ng-click="selectSlide(6)">Science</span>&mdash;
-	    <span class="profileLink" ng-class="{bold:5==selectedSlide}" ng-click="selectSlide(7)">Religion</span>&mdash;
-	    <span class="profileLink" ng-class="{bold:6==selectedSlide}" ng-click="selectSlide(8)">Research</span>&mdash;
-	    <span class="profileLink" ng-class="{bold:7==selectedSlide}" ng-click="selectSlide(9)">Mathematics</span>&mdash;
-	    <span class="profileLink" ng-class="{bold:8==selectedSlide}" ng-click="selectSlide(10)">Computer Science</span>
+	    <span  ng-repeat="slide in slides" ng-class="{bold:slide.position.indexOf(selectedSlide) > -1}" ng-click="selectSlide(slide.position)" ng-if="slide.thumbnail"> 
+	      <span class="profileLink" > 
+		{{slide.text}} 
+	      </span> 
+	      <span ng-if="$last==0"> 
+		&mdash; 
+	      </span> 
+	    </span>
 	  </p>
 	  <!-- <span class="profileLink" ng-repeat="slide in slides" ng-class="{'bold':slide.position==selectedSlide}"  ng-click="cycleTo(slide)">  -->
 	  <!--   &mdash;  {{slide.text}} &mdash; -->
@@ -69,35 +69,35 @@
 	  <div class="carousel profileCarousel">	
 	    <div class="slideContainer profileSlideContainer">
 	      <div style="padding:20px">
-	      <div class="slide profileSlide" ng-repeat="slide in slides", opacity:slide.opacity}"> <!-- fallait virer ca : ng-style="{left:(900*slide.position)+'px' -->
-		<div  ng-include="'pages/'+slide.html"></div>
+		<div class="slide profileSlide" ng-repeat="slide in slides", opacity:slide.opacity}"> <!-- fallait virer ca : ng-style="{left:(900*slide.position)+'px' -->
+		     <div  ng-include="'pages/'+slide.html"></div>
 	      </div>
 	    </div>
-	    </div>
-	    <div class="profileThumbnails">
-	      <img ng-repeat="slide in slides" ng-class="{'big':slide.position.indexOf(selectedSlide) > -1}" ng-src="{{slide.thumbnail}}" ng-click="selectSlide(slide.position)" ng-if="slide.thumbnail" />
-	    </div>
+	  </div>
+	  <div class="profileThumbnails">
+	    <img ng-repeat="slide in slides" ng-class="{'big':slide.position.indexOf(selectedSlide) > -1}" ng-src="{{slide.thumbnail}}" ng-click="selectSlide(slide.position)" ng-if="slide.thumbnail" />
 	  </div>
 	</div>
       </div>
-      
-      <div ng-repeat = "panel in panels">
-	<h1 id="{{panel.anchor}}">{{panel.name}}</h1>
-	<div class="panel">
-	     <div class="panelInside"
-		  id="panel-{{$index}}"
-		  ng-include="panel.page">
-	     </div>
+    </div>
+    
+    <div ng-repeat = "panel in panels">
+      <h1 id="{{panel.anchor}}">{{panel.name}}</h1>
+      <div class="panel">
+	<div class="panelInside"
+	     id="panel-{{$index}}"
+	     ng-include="panel.page">
 	</div>
       </div>
-      
-      <div id="footer">
-	Made with love, a tiny bit of <a href="https://angularjs.org/">angularJs</a> <br>
-	and loads of help from <br>
-	Mathias Rossignol <br>
-	bless him <br>
-	<a href="http://www.cnrs.fr"><img height="60" src="images/cnrsLogo.png"></a>
-      </div>
     </div>
-  </body>
+    
+    <div id="footer">
+      Made with love, a tiny bit of <a href="https://angularjs.org/">angularJs</a> <br>
+      and loads of help from <br>
+      Mathias Rossignol <br>
+      bless him <br>
+      <a href="http://www.cnrs.fr"><img height="60" src="images/cnrsLogo.png"></a>
+    </div>
+</div>
+</body>
 </html>
