@@ -1,7 +1,7 @@
 app.controller("PageController", function($scope, $timeout, $interval) {
 
     $scope.panels = [
-	{"name":"Expertise", "page":"pages/research.html", "anchor":"investigation"},
+	{"name":"Expertise", "page":"pages/expertise.html", "anchor":"expertise"},
 	{"name":"ExpLanes", "page":"pages/explanes.html", "anchor":"explanes"},
 	{"name":"Reproducible Research", "page":"pages/reproducible.html", "anchor":"reproducible"},
 	{"name":"Contributions", "page":"pages/contributions.html", "anchor":"contributions"},

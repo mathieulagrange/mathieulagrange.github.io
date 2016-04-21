@@ -21,22 +21,29 @@
     <div ng-controller="PageController">
       <div id="top">
       	<div style="width: auto; text-align: left; display: inline-block">
-	  <h2 style="font-size: 24px; margin-bottom: 10px">
 	    <span style="position:relative">
-	      <div style="position:absolute; left:-170px; top: -5px">
+	      <div style="position:absolute; left:-190px; top: -5px">
 		<img src="images/mathieu.png" style="width: 140px"/>
 	      </div>
-	      Mathieu Lagrange
+	      <h2 style="font-size: 24px; margin-bottom: 10px">
+		Mathieu Lagrange
+	      </h2>
+	      <div style="font-size: 10px; position:absolute; left:270px; top: -30px; text-align: right">
+	      	<a href="" ng-click="scrollTo('expertise')">Expertise</a> <br>
+		<a href="" ng-click="scrollTo('explanes')">ExpLanes</a> <br>
+		<a href="" ng-click="scrollTo('reproducible')">Reproducible Research</a> <br>
+		<a href="" ng-click="scrollTo('contributions')">Contributions</a> <br>
+		<a href="" ng-click="scrollTo('publications')">Publications</a>
+	      </div>
 	    </span>
-	  </h2>
-	  <h3 style="font-size: 12px; font-style: italic"><a href="http://www.cnrs.fr/">CNRS</a> researcher @ ADTSI team <br> <a href="http://www.irccyn.ec-nantes.fr/en">IRCCYN</a>, <a href="http://www.ec-nantes.fr/">Ecole Centrale de Nantes</a><br>	  <span style="font-size: 12px; font-style: italic">mathieu dot lagrange at cnrs dot fr</span></h3>
+	    <h3 style="font-size: 12px; font-style: italic"><a href="http://www.cnrs.fr/">CNRS</a> researcher @ ADTSI team <br> <a href="http://www.irccyn.ec-nantes.fr/en">IRCCYN</a>, <a href="http://www.ec-nantes.fr/">Ecole Centrale de Nantes</a><br>	  <span style="font-size: 12px; font-style: italic">mathieu dot lagrange at cnrs dot fr</span></h3>
 
 	</div>
       </div>
       
-      <div id="menu" ng-class="isAbsolute && 'normalMenu' || 'fixedMenu'">
+      <div id="menu" ng-show="!isAbsolute" class="fixedMenu">
 	<div>
-	  <a href="" ng-click="scrollTo('research')">Expertise</a> &mdash;
+	  <a href="" ng-click="scrollTo('expertise')">Expertise</a> &mdash;
 	  <a href="" ng-click="scrollTo('explanes')">ExpLanes</a> &mdash;
 	  <a href="" ng-click="scrollTo('reproducible')">Reproducible Research</a> &mdash;
 	  <a href="" ng-click="scrollTo('contributions')">Contributions</a> &mdash;
@@ -48,7 +55,7 @@
 	<div style="text-align:center"> 
 	<img style="width:70px" src="images/sepLine.png"/>
 	<br>
-	Partly why I became interested in doing Scientific Research in the fields of <br>
+	Partly why I became interested in doing research in <br>
 	Computer Science, Signal Processing, Machine Learning, and Cognitive Psychology. 
 	</div>
 	
@@ -70,7 +77,9 @@
 	    <div class="slideContainer profileSlideContainer">
 	      <div style="padding:20px">
 		<div class="slide profileSlide" ng-repeat="slide in slides", opacity:slide.opacity}"> <!-- fallait virer ca : ng-style="{left:(900*slide.position)+'px' -->
-		     <div  ng-include="'pages/'+slide.html"></div>
+		      <div style="padding: 20px 40px 20px 20px;">
+			<div  ng-include="'pages/'+slide.html"></div>
+		      </div>
 	      </div>
 	    </div>
 	  </div>

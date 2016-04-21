@@ -7,7 +7,7 @@ app.controller("SlidesController", function($scope, $timeout, $interval) {
 	[1000, 3000, 6000], 
 	[1000, 4000, 6000, 8000, 10000, 12000, 14500, 17000, 19000, 21000],
 	[1000, 3000, 5000, 7000, 9000, 11000],
-	[1000, 2500, 4000, 6000, 7500, 9000],
+	[1000, 2500, 5000, 7000, 8500, 11000],
 	[1000, 3000, 5000, 7000, 9000, 11000, 13000, 15000, 17000, 19000],
 	[1000, 3000, 5000, 8000, 10000, 12000, 14000, 16000],
 	[1000, 3000, 5000, 8000, 10000, 12000], 
@@ -15,8 +15,8 @@ app.controller("SlidesController", function($scope, $timeout, $interval) {
 	[1000, 3000, 5000, 7000],
 	[1000, 3000, 6000], 
 	[1000, 3000, 6000, 11000, 14000, 17000, 19000],
-	[1000, 3000, 1000, 3000, 7000, 9000, 11000, 13000], 
-	[34400, 38000, 43000, 46000, 49000, 54000],  
+	[1000, 4000, 6000, 9000, 12000, 15000, 18000, 21000], 
+	[1000, 4000, 7000],  
     ];
 
     var myTimeouts = []; 
@@ -37,7 +37,10 @@ app.controller("SlidesController", function($scope, $timeout, $interval) {
     targetOpacity[10][9] = .7;
     targetOpacity[10][11] = .7;
     targetOpacity[10][13] = .7;
-    targetOpacity[11][17] = .6;
+    targetOpacity[11][1] = .6;
+    targetOpacity[11][3] = .6;
+    targetOpacity[11][5] = .6;
+    targetOpacity[11][7] = .6;
 
     targetOpacity[4][9] = .6;
 
@@ -70,7 +73,10 @@ app.controller("SlidesController", function($scope, $timeout, $interval) {
 	if (n.constructor === Array)
 	    n = n[0];
 	console.log(n+" "+$scope.selectedSlide);
-	if (n > 8 && $scope.selectedSlide != 0 && $scope.selectedSlide != 9) {
+	if (n == 8 && $scope.selectedSlide != 0 || 
+	    n == 8 && $scope.selectedSlide != 9 ||
+	    n == 11 && $scope.selectedSlide != 3 || 
+	    n == 12 && $scope.selectedSlide != 11) {
 	    return;
 	}
 	// build opacity array
@@ -83,7 +89,7 @@ app.controller("SlidesController", function($scope, $timeout, $interval) {
 	    mt = $timeout(function(){$scope.opacity[n][index] = 1;}, time);
 	    myTimeouts.push(mt);
 	    if (targetOpacity[n][index] != 1) {
-		mt = $timeout(function(){$scope.opacity[n][index] = targetOpacity[n][index];}, time+500);
+		mt = $timeout(function(){$scope.opacity[n][index] = targetOpacity[n][index];}, time+900);
 		myTimeouts.push(mt);
 	    }
 	});
