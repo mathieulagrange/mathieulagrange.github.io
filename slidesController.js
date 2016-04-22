@@ -8,7 +8,7 @@ app.controller("SlidesController", function($scope, $timeout, $interval) {
 	[1000, 4000, 6000, 8000, 10000, 12000, 14500, 17000, 19000, 21000],
 	[1000, 3000, 5000, 7000, 9000, 11000],
 	[1000, 2500, 5000, 7000, 8500, 11000],
-	[1000, 3000, 5000, 7000, 9000, 11000, 13000, 15000, 17000, 19000],
+	[1000, 3000, 5000, 7000, 9000, 11000, 13000, 16000, 18000, 20000],
 	[1000, 3000, 5000, 8000, 10000, 12000, 14000, 16000],
 	[1000, 3000, 5000, 8000, 10000, 12000], 
 	[1000, 3000, 5000, 7000, 9000, 11000],
@@ -73,8 +73,8 @@ app.controller("SlidesController", function($scope, $timeout, $interval) {
 	if (n.constructor === Array)
 	    n = n[0];
 	console.log(n+" "+$scope.selectedSlide);
-	if (n == 8 && $scope.selectedSlide != 0 || 
-	    n == 8 && $scope.selectedSlide != 9 ||
+	if (n == 9 && $scope.selectedSlide != 0 || 
+	    n == 10 && $scope.selectedSlide != 9 ||
 	    n == 11 && $scope.selectedSlide != 3 || 
 	    n == 12 && $scope.selectedSlide != 11) {
 	    return;
