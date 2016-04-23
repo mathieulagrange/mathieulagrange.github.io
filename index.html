@@ -78,7 +78,7 @@
 	      <div style="padding:20px">
 		<div class="slide profileSlide" ng-repeat="slide in slides", opacity:slide.opacity}"> <!-- fallait virer ca : ng-style="{left:(900*slide.position)+'px' -->
 		      <div style="padding: 20px 40px 20px 20px;">
-			<div  ng-include="'pages/'+slide.html"></div>
+			<div   ng-include="'pages/'+slide.html"></div>
 		      </div>
 	      </div>
 	    </div>
@@ -89,14 +89,15 @@
 	</div>
       </div>
     </div>
-    
+    <br>
     <div ng-repeat = "panel in panels">
-      <h1 id="{{panel.anchor}}">{{panel.name}}</h1>
+	<h1   id="{{panel.anchor}}">{{panel.name}}</h1>
       <div class="panel">
-	<div class="panelInside"
+	<div class="panelInside">
+	<div class="panelInsideText"
 	     id="panel-{{$index}}"
 	     ng-include="panel.page">
-	</div>
+	</div>	</div>
       </div>
     </div>
     
