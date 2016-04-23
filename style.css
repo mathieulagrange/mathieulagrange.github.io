@@ -57,7 +57,7 @@ div.panelInside {
 
 div.panelInsideText {
     margin:auto;
-    width: 1000px; 
+    max-width: 1000px; 
 }
 
 
