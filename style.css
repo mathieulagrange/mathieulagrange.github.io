@@ -9,6 +9,7 @@ a {
     text-decoration: none;
     font-family: 'Libre Baskerville';
     font-size; 15px;
+    font-weight: bold;
 }
 
 dt {
@@ -178,9 +179,13 @@ span.profileLink {
 }
 
 span.profileLink:hover {
-    text-decoration: underline;
+    color: darkred;
 }
 
+/* selected link */
+span.profileLink:active {
+    color: red;
+}
 
 div.profileSlide {
     height: 300px;
