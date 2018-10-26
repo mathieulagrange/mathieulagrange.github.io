@@ -2,7 +2,7 @@
 <html ng-app="researchWebSite">
 
   <head>
-    <meta charset="utf-8" /> 
+    <meta charset="utf-8" />
     <title>Mathieu Lagrange</title>
     <link rel="icon" type="image/png" href="images/cnrsIco.png" />
     <script src="angular.min.js"></script>
@@ -32,7 +32,8 @@
 	      	<a href="" ng-click="scrollTo('expertise')">Expertise</a> <br>
 		<a href="" ng-click="scrollTo('explanes')">ExpLanes</a> <br>
 		<a href="" ng-click="scrollTo('reproducible')">Reproducible Research</a> <br>
-		<a href="" ng-click="scrollTo('contributions')">Contributions</a> <br>
+    <a href="" ng-click="scrollTo('contributions')">Contributions</a> <br>
+    <a href="" ng-click="scrollTo('teaching')">Teaching</a> <br>
 		<a href="" ng-click="scrollTo('publications')">Publications</a>
 	      </div>
 	    </span>
@@ -40,7 +41,7 @@
 
 	</div>
       </div>
-      
+
       <div id="menu" ng-show="!isAbsolute" class="fixedMenu">
 	<div>
 	  <a href="" ng-click="scrollTo('expertise')">Expertise</a> &mdash;
@@ -50,30 +51,30 @@
 	  <a href="" ng-click="scrollTo('publications')">Publications</a>
 	</div>
       </div>
-      
+
       <div id="page">
-	<div style="text-align:center"> 
+	<div style="text-align:center">
 	<img style="width:70px" src="images/sepLine.png"/>
 	<div style="padding-top:15px">
 	Partly why I became interested in doing research in <br>
-	Computer Science, Signal Processing, Machine Learning, and Cognitive Psychology. 
+	Computer Science, Signal Processing, Machine Learning, and Cognitive Psychology.
 	</div>	</div>
-	
-	<div ng-controller="SlidesController">	  
-	  <p class="profileLinks">  
-	    <span  ng-repeat="slide in slides" ng-class="{bold:slide.position.indexOf(selectedSlide) > -1}" ng-click="selectSlide(slide.position)" ng-if="slide.thumbnail"> 
-	      <span class="profileLink" > 
-		{{slide.text}} 
-	      </span> 
-	      <span ng-if="$last==0"> 
-		&mdash; 
-	      </span> 
+
+	<div ng-controller="SlidesController">
+	  <p class="profileLinks">
+	    <span  ng-repeat="slide in slides" ng-class="{bold:slide.position.indexOf(selectedSlide) > -1}" ng-click="selectSlide(slide.position)" ng-if="slide.thumbnail">
+	      <span class="profileLink" >
+		{{slide.text}}
+	      </span>
+	      <span ng-if="$last==0">
+		&mdash;
+	      </span>
 	    </span>
 	  </p>
 	  <!-- <span class="profileLink" ng-repeat="slide in slides" ng-class="{'bold':slide.position==selectedSlide}"  ng-click="cycleTo(slide)">  -->
 	  <!--   &mdash;  {{slide.text}} &mdash; -->
 	  <!-- </span> -->
-	  <div class="carousel profileCarousel">	
+	  <div class="carousel profileCarousel">
 	    <div class="slideContainer profileSlideContainer">
 	      <div style="padding:20px">
 		<div class="slide profileSlide" ng-repeat="slide in slides", opacity:slide.opacity}"> <!-- fallait virer ca : ng-style="{left:(900*slide.position)+'px' -->
@@ -100,7 +101,7 @@
 	</div>	</div>
       </div>
     </div>
-    
+
     <div id="footer">
       Made with love, a tiny bit of <a href="https://angularjs.org/">angularJs</a> <br>
       and loads of help from <br>

@@ -4,7 +4,8 @@ app.controller("PageController", function($scope, $timeout, $interval) {
 	{"name":"Expertise", "page":"pages/expertise.html", "anchor":"expertise"},
 	{"name":"ExpLanes", "page":"pages/explanes.html", "anchor":"explanes"},
 	{"name":"Reproducible Research", "page":"pages/reproducible.html", "anchor":"reproducible"},
-	{"name":"Contributions", "page":"pages/contributions.html", "anchor":"contributions"},
+  {"name":"Contributions", "page":"pages/contributions.html", "anchor":"contributions"},
+  {"name":"Teaching", "page":"pages/teaching.html", "anchor":"teaching"},
 	{"name":"Publications", "page":"pages/publications.html", "anchor":"publications"},
    ];
 
@@ -20,7 +21,7 @@ app.controller("PageController", function($scope, $timeout, $interval) {
 	    setTimeout(progressiveScrollTo.curry(y, lastY), 50);
 	}
     }
-    
+
     $scope.scrollTo = function (id) {
 	var coords = pageCoordinates(document.getElementById(id));
 	scrollSpeedMult = 3;
@@ -37,5 +38,5 @@ app.controller("PageController", function($scope, $timeout, $interval) {
 	else if (window.scrollY <= 180 && !$scope.isAbsolute)
 	    $scope.$apply("isAbsolute = true");
     });
-    
+
 });
