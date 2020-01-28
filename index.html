@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="images/cnrsIco.png" />
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
+    <script src="utils.js"></script>
     <script src="pageController.js"></script>
     <script src="slidesController.js"></script>
     <script src="demosController.js"></script>
@@ -29,8 +30,9 @@
 	      </h2>
 	      <div style="font-size: 10px; position:absolute; left:270px; top: -30px; text-align: right">
 	      	<a href="" ng-click="scrollTo('expertise')">Expertise</a> <br>
-		<a href="" ng-click="scrollTo('explanes')">ExpLanes</a> <br>
+          <a href="" ng-click="scrollTo('hdr')">Habilitation Thesis</a> &mdash;
 		<a href="" ng-click="scrollTo('reproducible')">Reproducible Research</a> <br>
+    <a href="" ng-click="scrollTo('explanes')">ExpLanes</a> <br>
     <a href="" ng-click="scrollTo('contributions')">Contributions</a> <br>
     <a href="" ng-click="scrollTo('teaching')">Teaching</a> <br>
 		<a href="" ng-click="scrollTo('publications')">Publications</a>
@@ -44,9 +46,10 @@
       <div id="menu" ng-show="!isAbsolute" class="fixedMenu">
 	<div>
 	  <a href="" ng-click="scrollTo('expertise')">Expertise</a> &mdash;
-	  <a href="" ng-click="scrollTo('explanes')">ExpLanes</a> &mdash;
-	  <a href="" ng-click="scrollTo('reproducible')">Reproducible Research</a> &mdash;
-	  <a href="" ng-click="scrollTo('contributions')">Contributions</a> &mdash;
+    <a href="" ng-click="scrollTo('hdr')">Habilitation Thesis</a> &mdash;
+    <a href="" ng-click="scrollTo('reproducible')">Reproducible Research</a> &mdash;
+   <a href="" ng-click="scrollTo('explanes')">ExpLanes</a> &mdash;
+ 	 <a href="" ng-click="scrollTo('contributions')">Contributions</a> &mdash;
 	  <a href="" ng-click="scrollTo('publications')">Publications</a>
 	</div>
       </div>

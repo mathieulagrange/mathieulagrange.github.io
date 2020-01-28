@@ -2,8 +2,9 @@ app.controller("PageController", function($scope, $timeout, $interval) {
 
     $scope.panels = [
 	{"name":"Expertise", "page":"pages/expertise.html", "anchor":"expertise"},
-	{"name":"ExpLanes", "page":"pages/explanes.html", "anchor":"explanes"},
-	{"name":"Reproducible Research", "page":"pages/reproducible.html", "anchor":"reproducible"},
+  {"name":"Habilitation Thesis", "page":"pages/hdr.html", "anchor":"hdr"},
+  {"name":"Reproducible Research", "page":"pages/reproducible.html", "anchor":"reproducible"},
+  {"name":"ExpLanes", "page":"pages/explanes.html", "anchor":"explanes"},
   {"name":"Contributions", "page":"pages/contributions.html", "anchor":"contributions"},
   {"name":"Teaching", "page":"pages/teaching.html", "anchor":"teaching"},
 	{"name":"Publications", "page":"pages/publications.html", "anchor":"publications"},
@@ -17,7 +18,7 @@ app.controller("PageController", function($scope, $timeout, $interval) {
 	if (Math.abs(delta) < 5) window.scrollTo(0, y);
 	else {
 	    lastY = window.scrollY;
-	    window.scrollTo(0, window.scrollY+delta);
+      window.scrollTo(0, window.scrollY+delta);
 	    setTimeout(progressiveScrollTo.curry(y, lastY), 50);
 	}
     }
