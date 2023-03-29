@@ -4,7 +4,7 @@ app.controller("PageController", function($scope, $timeout, $interval) {
 	{"name":"Expertise", "page":"pages/expertise.html", "anchor":"expertise"},
   {"name":"Habilitation Thesis", "page":"pages/hdr.html", "anchor":"hdr"},
   {"name":"Reproducible Research", "page":"pages/reproducible.html", "anchor":"reproducible"},
-  {"name":"ExpLanes", "page":"pages/explanes.html", "anchor":"explanes"},
+  {"name":"ExpLanes", "page":"pages/doce.html", "anchor":"explanes"},
   {"name":"Contributions", "page":"pages/contributions.html", "anchor":"contributions"},
   {"name":"Teaching", "page":"pages/teaching.html", "anchor":"teaching"},
 	{"name":"Publications", "page":"pages/publications.html", "anchor":"publications"},
